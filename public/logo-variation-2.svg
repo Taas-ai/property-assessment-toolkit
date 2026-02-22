@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <defs>
+    <linearGradient id="purpleGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9333EA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C084FC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Flowing wave network -->
+  <g transform="translate(10, 50)">
+    <!-- Wave paths -->
+    <path d="M 0,0 Q 10,-15 20,0 T 40,0 T 60,0 T 80,0"
+          fill="none" stroke="url(#purpleGrad2)" stroke-width="2" opacity="0.5"/>
+    <path d="M 0,10 Q 10,-5 20,10 T 40,10 T 60,10 T 80,10"
+          fill="none" stroke="#9333EA" stroke-width="1.5" opacity="0.4"/>
+    <path d="M 0,-10 Q 10,-25 20,-10 T 40,-10 T 60,-10 T 80,-10"
+          fill="none" stroke="#C084FC" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Flow nodes -->
+    <circle cx="0" cy="0" r="3" fill="#9333EA"/>
+    <circle cx="20" cy="0" r="3.5" fill="#C084FC"/>
+    <circle cx="40" cy="0" r="3" fill="#9333EA"/>
+    <circle cx="60" cy="0" r="3.5" fill="#C084FC"/>
+    <circle cx="80" cy="0" r="4" fill="url(#purpleGrad2)"/>
+
+    <!-- Connecting lines -->
+    <g opacity="0.3" stroke="#9333EA" stroke-width="1" fill="none">
+      <line x1="0" y1="0" x2="0" y2="10"/>
+      <line x1="20" y1="0" x2="20" y2="-10"/>
+      <line x1="40" y1="0" x2="40" y2="10"/>
+      <line x1="60" y1="0" x2="60" y2="-10"/>
+    </g>
+  </g>
+
+  <!-- Text - stacked modern style -->
+  <g transform="translate(120, 35)">
+    <text x="0" y="0" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="40" font-weight="700" fill="url(#purpleGrad2)">BIZ</text>
+    <text x="0" y="28" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="32" font-weight="200" letter-spacing="6" fill="#000000">FLOW</text>
+    <rect x="0" y="34" width="120" height="1" fill="url(#purpleGrad2)" opacity="0.5"/>
+    <text x="0" y="46" font-family="'Inter', sans-serif" font-size="9" font-weight="500" letter-spacing="2" fill="#666">CONSULTANCY</text>
+  </g>
+</svg>
