@@ -231,7 +231,7 @@
                     <a href="#methodology" class="text-slate-500 hover:text-brand-purple transition font-medium text-sm">Methodology</a>
                     <a href="#contact" class="text-slate-500 hover:text-brand-purple transition font-medium text-sm">Contact</a>
                     <a href="#request" class="btn-primary px-5 py-2.5 rounded-lg font-semibold text-sm">
-                        Request Assessment
+                        Free AI Scan
                     </a>
                 </div>
 
@@ -252,7 +252,7 @@
                 <a href="#methodology" class="block text-slate-600 hover:text-brand-purple transition">Methodology</a>
                 <a href="#contact" class="block text-slate-600 hover:text-brand-purple transition">Contact</a>
                 <a href="#request" class="block btn-primary text-center px-5 py-2.5 rounded-lg font-semibold text-sm">
-                    Request Assessment
+                    Free AI Scan
                 </a>
             </div>
         </div>
@@ -866,6 +866,8 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.card-lattice, .card-featured').forEach(card => {
+            // Skip the form — animation causes pointer-event interception on submit button
+            if (card.id === 'assessmentForm') return;
             card.style.opacity = '0';
             card.style.transform = 'translateY(16px)';
             card.style.transition = 'all 0.5s ease';
