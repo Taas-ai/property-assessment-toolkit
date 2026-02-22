@@ -1,116 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BizFlow™ Property Assessment Consultancy - Professional Dubai commercial property assessment services. Executive summary reports, regulatory compliance analysis, master plan impact assessment for UAE real estate investors.">
-    <title>BizFlow™ Property Assessment | Dubai Commercial Real Estate</title>
+    <meta name="description" content="BizFlow™ by Taurus AI - Dubai's premier quantum-safe property assessment consultancy. AI-powered regulatory compliance, Dubai 2040 rezoning risk analysis, and investment-grade due diligence reports.">
+    <title>BizFlow™ by Taurus AI | Dubai Property Assessment Consultancy</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo-variation-3.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#9333EA',
-                        'primary-dark': '#7C3AED',
-                        'primary-light': '#C084FC',
-                        accent: '#D8B4FE',
-                        dark: '#000000',
-                        'dark-soft': '#1A1A1A',
-                        light: '#F5F5F5'
+                        // Purple (Primary)
+                        'purple-50': '#FAF5FF',
+                        'purple-100': '#F3E8FF',
+                        'purple-200': '#E9D5FF',
+                        'purple-300': '#D8B4FE',
+                        'purple-400': '#C084FC',
+                        'purple-500': '#9333EA',
+                        'purple-600': '#7C3AED',
+                        'purple-700': '#6D28D9',
+                        'purple-800': '#5B21B6',
+                        'purple-900': '#4C1D95',
+                        'purple-950': '#2E0A5A',
+
+                        // Cyan (Secondary)
+                        'cyan-50': '#ECFEFF',
+                        'cyan-100': '#CFFAFE',
+                        'cyan-200': '#A5F3FC',
+                        'cyan-300': '#67E8F9',
+                        'cyan-400': '#22D3EE',
+                        'cyan-500': '#06B6D4',
+                        'cyan-600': '#0891B2',
+                        'cyan-700': '#0E7490',
+                        'cyan-800': '#155E75',
+                        'cyan-900': '#164E63',
+                        'cyan-950': '#0A3D4F',
+
+                        // Dark theme
+                        'dark-bg': '#0A0A0A',
+                        'dark-surface': '#1A1A1A',
+                        'dark-border': '#2A2A2A',
                     },
                     fontFamily: {
-                        'display': ['Orbitron', 'Space Grotesk', 'sans-serif'],
-                        'body': ['Inter', 'sans-serif']
-                    }
+                        'display': ['Space Grotesk', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'glow-purple': '0 0 30px rgba(147, 51, 234, 0.5)',
+                        'glow-cyan': '0 0 30px rgba(34, 211, 238, 0.5)',
+                        'glow-brand': '0 0 40px rgba(147, 51, 234, 0.3), 0 0 60px rgba(34, 211, 238, 0.2)',
+                    },
+                    animation: {
+                        'circuit-pulse': 'circuit-pulse 3s ease-in-out infinite',
+                        'fade-in-up': 'fade-in-up 0.6s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'circuit-pulse': {
+                            '0%, 100%': { opacity: '0.4' },
+                            '50%': { opacity: '1' },
+                        },
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'glow': {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(147, 51, 234, 0.4)' },
+                            '50%': { boxShadow: '0 0 40px rgba(147, 51, 234, 0.8), 0 0 60px rgba(34, 211, 238, 0.4)' },
+                        },
+                    },
                 }
             }
         }
     </script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #7C3AED 0%, #9333EA 50%, #C084FC 100%); }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(147, 51, 234, 0.3); }
-        .glow { box-shadow: 0 0 20px rgba(147, 51, 234, 0.4); }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-        .float { animation: float 3s ease-in-out infinite; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0A0A0A;
+        }
+
+        /* Circuit background */
+        .circuit-bg {
+            background-image:
+                linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #9333EA 0%, #22D3EE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Gradient border */
+        .gradient-border {
+            position: relative;
+            background: #1A1A1A;
+            border-radius: 1rem;
+        }
+
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            padding: 2px;
+            background: linear-gradient(135deg, #9333EA, #22D3EE);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+
+        /* Card hover with glow */
+        .card-glow {
+            transition: all 0.3s ease;
+        }
+
+        .card-glow:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 40px rgba(147, 51, 234, 0.4), 0 0 60px rgba(34, 211, 238, 0.2);
+        }
+
+        /* Neon button */
+        .btn-neon {
+            background: linear-gradient(135deg, #9333EA 0%, #7C3AED 50%, #06B6D4 100%);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+        }
+
+        .btn-neon:hover {
+            box-shadow: 0 0 30px rgba(147, 51, 234, 0.8), 0 0 50px rgba(34, 211, 238, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(147, 51, 234, 0.2);
+        }
     </style>
 </head>
-<body class="bg-white text-gray-900">
+
+<body class="bg-dark-bg text-white antialiased">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-primary/10">
+    <nav class="fixed top-0 w-full glass z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-3">
-                    <img src="logo-variation-3.svg" alt="BizFlow Logo" class="h-8 w-auto">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo + Brand -->
+                <div class="flex items-center space-x-4">
+                    <img src="logo-variation-3.svg" alt="BizFlow Logo" class="h-10 w-auto">
                     <div>
                         <div class="flex items-baseline space-x-1">
-                            <span class="text-2xl font-bold text-primary font-display">BIZ</span>
-                            <span class="text-2xl font-light text-dark">FLOW</span>
+                            <span class="text-3xl font-bold gradient-text font-display">BizFlow™</span>
                         </div>
-                        <span class="text-xs text-gray-500 font-body tracking-wide">PROPERTY ASSESSMENT</span>
+                        <div class="text-[10px] text-gray-400 font-mono tracking-[0.2em] -mt-1">
+                            BY TAURUS AI
+                        </div>
                     </div>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-primary transition font-medium">Services</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-primary transition font-medium">Portfolio</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary transition font-medium">Contact</a>
-                    <a href="#request" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition font-semibold shadow-md hover:shadow-lg">Request Assessment</a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-300 hover:text-cyan-400 transition font-medium">Services</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-cyan-400 transition font-medium">Portfolio</a>
+                    <a href="#methodology" class="text-gray-300 hover:text-cyan-400 transition font-medium">Methodology</a>
+                    <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition font-medium">Contact</a>
+                    <a href="#request" class="btn-neon text-white px-6 py-3 rounded-lg font-semibold text-sm">
+                        Request Assessment →
+                    </a>
                 </div>
-                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
+
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-4 py-3 space-y-2">
-                <a href="#services" class="block text-gray-700 hover:text-primary transition">Services</a>
-                <a href="#portfolio" class="block text-gray-700 hover:text-primary transition">Portfolio</a>
-                <a href="#contact" class="block text-gray-700 hover:text-primary transition">Contact</a>
-                <a href="#request" class="block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-dark transition text-center">Request Assessment</a>
+        <div id="mobileMenu" class="hidden md:hidden glass border-t border-dark-border">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#services" class="block text-gray-300 hover:text-cyan-400 transition">Services</a>
+                <a href="#portfolio" class="block text-gray-300 hover:text-cyan-400 transition">Portfolio</a>
+                <a href="#methodology" class="block text-gray-300 hover:text-cyan-400 transition">Methodology</a>
+                <a href="#contact" class="block text-gray-300 hover:text-cyan-400 transition">Contact</a>
+                <a href="#request" class="block btn-neon text-white px-6 py-3 rounded-lg font-semibold text-center">
+                    Request Assessment →
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 gradient-bg text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+    <section class="relative pt-32 pb-24 px-4 overflow-hidden circuit-bg">
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-950/30 via-dark-bg to-cyan-950/30"></div>
+
+        <!-- Circuit Lines Animation -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-purple-500 rounded-full blur-3xl animate-circuit-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500 rounded-full blur-3xl animate-circuit-pulse" style="animation-delay: 1.5s;"></div>
         </div>
+
         <div class="max-w-7xl mx-auto relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Dubai Property<br/>Assessment Made <span class="text-accent">Intelligent</span>
+            <div class="text-center max-w-5xl mx-auto animate-fade-in-up">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 px-4 py-2 glass rounded-full mb-8">
+                    <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+                    <span class="text-sm text-gray-300 font-mono">Dubai's First Quantum-Safe Property Assessment</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight font-display">
+                    Avoid <span class="gradient-text">AED 50M+</span><br/>
+                    Rezoning Risks
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-white/90">
-                    Comprehensive due diligence reports for informed real estate investment decisions. Regulatory compliance, master plan analysis, 20-year risk assessment.
+
+                <!-- Subheadline -->
+                <p class="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    AI-powered property due diligence reports combining regulatory compliance, Dubai 2040 master plan analysis, and 20-year rezoning risk assessment.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#request" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition shadow-xl hover:shadow-2xl">
-                        Request Assessment →
+
+                <!-- Authority Statement -->
+                <div class="flex items-center justify-center space-x-2 mb-10 text-cyan-400">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Led by ex-Dubai Municipality Zoning Specialist • 15+ Years UAE Real Estate</span>
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#request" class="btn-neon text-white px-8 py-4 rounded-lg font-bold text-lg">
+                        Get Free Risk Assessment →
                     </a>
-                    <a href="#portfolio" class="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30">
+                    <a href="#portfolio" class="glass text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-cyan-400 transition">
                         View Sample Reports
                     </a>
                 </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
-                        <div class="text-4xl font-bold mb-2">5-7</div>
-                        <div class="text-white/80">Days Delivery</div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="glass p-6 rounded-xl">
+                        <div class="text-4xl font-bold gradient-text mb-2">5-7</div>
+                        <div class="text-gray-400 text-sm">Days Delivery</div>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
-                        <div class="text-4xl font-bold mb-2">8+</div>
-                        <div class="text-white/80">Authorities Assessed</div>
+                    <div class="glass p-6 rounded-xl">
+                        <div class="text-4xl font-bold gradient-text mb-2">8+</div>
+                        <div class="text-gray-400 text-sm">Authorities Assessed</div>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
-                        <div class="text-4xl font-bold mb-2">20</div>
-                        <div class="text-white/80">Year Outlook</div>
+                    <div class="glass p-6 rounded-xl">
+                        <div class="text-4xl font-bold gradient-text mb-2">20</div>
+                        <div class="text-gray-400 text-sm">Year Risk Outlook</div>
                     </div>
                 </div>
             </div>
@@ -118,182 +278,170 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-4 bg-gray-50">
+    <section id="services" class="py-24 px-4 bg-dark-surface">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Assessment Services</h2>
-                <p class="text-xl text-gray-600">Professional due diligence tailored to your investment needs</p>
+                <span class="text-cyan-400 font-mono text-sm tracking-widest mb-4 block">ASSESSMENT SERVICES</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">Investment-Grade Due Diligence</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Professional property assessment tailored to your investment timeline and risk tolerance</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Phase 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-2 border-transparent hover:border-primary">
-                    <div class="text-sm font-semibold text-primary mb-2">PHASE 1</div>
-                    <h3 class="text-2xl font-bold mb-2">Executive Summary</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-4">AED 20,000</div>
+                <div class="gradient-border p-8 card-glow">
+                    <div class="text-xs font-mono text-cyan-400 mb-3">PHASE 1</div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Executive<br/>Summary</h3>
+                    <div class="text-3xl font-bold text-white mb-2">AED 20K</div>
                     <div class="text-sm text-gray-500 mb-6">⏱ 5-7 business days</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">8-page professional report</span>
+                            8-page professional report
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Regulatory compliance (5 authorities)</span>
+                            5-authority compliance
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Dubai 2040 master plan impact</span>
+                            Dubai 2040 rezoning risk
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Infrastructure risk matrix</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-sm">Board recommendation</span>
+                            Board recommendation
                         </li>
                     </ul>
-                    <a href="#request" class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary-dark transition">
+
+                    <a href="#request" class="block w-full bg-purple-600 hover:bg-purple-500 text-white text-center py-3 rounded-lg font-semibold transition">
                         Get Started
                     </a>
                 </div>
 
-                <!-- Phase 2 -->
-                <div class="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 shadow-xl card-hover text-white relative overflow-hidden glow">
-                    <div class="absolute top-4 right-4 bg-accent text-dark px-3 py-1 rounded-full text-xs font-bold">POPULAR</div>
-                    <div class="text-sm font-semibold text-white/80 mb-2">PHASE 2</div>
-                    <h3 class="text-2xl font-bold mb-2">Full Due Diligence</h3>
-                    <div class="text-3xl font-bold mb-4">AED 55,000</div>
-                    <div class="text-sm text-white/80 mb-6">⏱ 3-4 weeks</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <!-- Phase 2 - Featured -->
+                <div class="gradient-border p-8 card-glow relative overflow-hidden shadow-glow-brand">
+                    <div class="absolute top-4 right-4 bg-cyan-400 text-dark-bg px-3 py-1 rounded-full text-xs font-bold">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-xs font-mono text-cyan-400 mb-3">PHASE 2</div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Full Due<br/>Diligence</h3>
+                    <div class="text-3xl font-bold text-white mb-2">AED 55K</div>
+                    <div class="text-sm text-gray-500 mb-6">⏱ 3-4 weeks</div>
+
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Everything in Phase 1</span>
+                            Everything in Phase 1
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Site visit & physical inspection</span>
+                            Site visit & inspection
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Comparative market analysis</span>
+                            Market analysis
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Financial impact modeling</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-sm">Legal & title verification</span>
+                            Legal verification
                         </li>
                     </ul>
-                    <a href="mailto:admin@taurusai.io?subject=Phase 2 Inquiry" class="block w-full bg-white text-primary text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+
+                    <a href="mailto:admin@taurusai.io?subject=Phase 2 Inquiry" class="block w-full btn-neon text-white text-center py-3 rounded-lg font-semibold">
                         Request Proposal
                     </a>
                 </div>
 
                 <!-- Phase 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-2 border-transparent hover:border-primary">
-                    <div class="text-sm font-semibold text-primary mb-2">PHASE 3</div>
-                    <h3 class="text-2xl font-bold mb-2">Investment-Grade</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-4">AED 120,000</div>
+                <div class="gradient-border p-8 card-glow">
+                    <div class="text-xs font-mono text-cyan-400 mb-3">PHASE 3</div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Investment<br/>Grade</h3>
+                    <div class="text-3xl font-bold text-white mb-2">AED 120K</div>
                     <div class="text-sm text-gray-500 mb-6">⏱ 6-8 weeks</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Everything in Phase 2</span>
+                            Everything in Phase 2
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Alternative site analysis</span>
+                            Alternative site analysis
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">10-year financial modeling</span>
+                            10-year financial model
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Expert witness statement</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-sm">Board presentation deck</span>
+                            Board presentation deck
                         </li>
                     </ul>
-                    <a href="mailto:admin@taurusai.io?subject=Phase 3 Inquiry" class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary-dark transition">
+
+                    <a href="mailto:admin@taurusai.io?subject=Phase 3 Inquiry" class="block w-full bg-purple-600 hover:bg-purple-500 text-white text-center py-3 rounded-lg font-semibold transition">
                         Request Proposal
                     </a>
                 </div>
 
                 <!-- Phase 4 -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover border-2 border-transparent hover:border-primary">
-                    <div class="text-sm font-semibold text-primary mb-2">PHASE 4</div>
-                    <h3 class="text-2xl font-bold mb-2">Annual Monitoring</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-4">AED 75,000<span class="text-lg text-gray-500">/yr</span></div>
+                <div class="gradient-border p-8 card-glow">
+                    <div class="text-xs font-mono text-cyan-400 mb-3">PHASE 4</div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Annual<br/>Monitoring</h3>
+                    <div class="text-3xl font-bold text-white mb-2">AED 75K<span class="text-lg text-gray-500">/yr</span></div>
                     <div class="text-sm text-gray-500 mb-6">⏱ 12-month retainer</div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+
+                    <ul class="space-y-3 mb-8 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Regulatory change alerts</span>
+                            Regulatory change alerts
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Quarterly master plan monitoring</span>
+                            Quarterly monitoring
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Annual reassessment</span>
+                            Annual reassessment
                         </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span class="text-sm">Compliance audit</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-primary mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-sm">Priority support (24hr response)</span>
+                            Priority support (24hr)
                         </li>
                     </ul>
-                    <a href="mailto:admin@taurusai.io?subject=Annual Monitoring Inquiry" class="block w-full bg-primary text-white text-center py-3 rounded-lg font-semibold hover:bg-primary-dark transition">
+
+                    <a href="mailto:admin@taurusai.io?subject=Annual Monitoring Inquiry" class="block w-full bg-purple-600 hover:bg-purple-500 text-white text-center py-3 rounded-lg font-semibold transition">
                         Request Proposal
                     </a>
                 </div>
@@ -301,398 +449,360 @@
         </div>
     </section>
 
-    <!-- Portfolio Section - 3 Diverse Samples -->
-    <section id="portfolio" class="py-20 px-4 bg-white">
+    <!-- Portfolio/Sample Reports Section -->
+    <section id="portfolio" class="py-24 px-4 bg-dark-bg circuit-bg">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Sample Reports</h2>
-                <p class="text-xl text-gray-600">View diverse assessment examples across different property types</p>
+                <span class="text-cyan-400 font-mono text-sm tracking-widest mb-4 block">SAMPLE REPORTS</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">Diverse Assessment Examples</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">View risk-graded reports across different Dubai commercial property types</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Sample 1: Office Tower - Green Risk -->
-                <div class="bg-white rounded-2xl shadow-xl border-2 border-gray-100 card-hover">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Grade A Office Tower</h3>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">🟢 Low Risk</span>
-                        </div>
-                        <p class="text-base font-semibold text-gray-700 mb-1">Business Bay District</p>
-                        <p class="text-sm text-gray-600 mb-4">Plot 234-789, Sheikh Zayed Road</p>
-
-                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                            <p class="font-semibold text-gray-900 text-sm mb-1">Board Recommendation:</p>
-                            <p class="text-gray-700 text-sm">✅ Proceed</p>
-                        </div>
-
-                        <h4 class="font-bold text-gray-900 text-sm mb-2">Key Findings:</h4>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Full regulatory compliance
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Metro access (200m)
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                5% rezoning probability
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                AED 2.1M property value
-                            </li>
-                        </ul>
-
-                        <a href="#request" class="block w-full bg-primary text-white text-center py-2 rounded-lg font-semibold text-sm hover:bg-primary-dark transition">
-                            View Similar Assessment
-                        </a>
+            <!-- Bento Grid Layout -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Office Tower - Green -->
+                <div class="gradient-border p-6 card-glow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-display">Grade A Office</h3>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-bold border border-green-500/30">
+                            🟢 LOW RISK
+                        </span>
                     </div>
+                    <p class="text-base font-semibold text-gray-300 mb-1">Business Bay District</p>
+                    <p class="text-sm text-gray-500 mb-4">Plot 234-789, Sheikh Zayed Road</p>
+
+                    <div class="bg-dark-surface/50 rounded-lg p-4 mb-4 border border-green-500/20">
+                        <p class="text-xs font-mono text-gray-400 mb-1">Board Recommendation:</p>
+                        <p class="text-sm text-green-400 font-semibold">✅ PROCEED</p>
+                    </div>
+
+                    <ul class="space-y-2 mb-6 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Full regulatory compliance
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Metro access (200m)
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            5% rezoning probability
+                        </li>
+                    </ul>
+
+                    <a href="#request" class="block w-full bg-green-600 hover:bg-green-500 text-white text-center py-2 rounded-lg font-semibold text-sm transition">
+                        View Similar Assessment
+                    </a>
                 </div>
 
-                <!-- Sample 2: Retail Mall - Yellow Risk -->
-                <div class="bg-white rounded-2xl shadow-xl border-2 border-primary card-hover glow">
-                    <div class="bg-gradient-to-br from-primary/5 to-primary-light/10 rounded-t-2xl px-4 py-2">
-                        <span class="text-xs font-bold text-primary">FEATURED SAMPLE</span>
+                <!-- Retail Mall - Yellow (Featured) -->
+                <div class="gradient-border p-6 card-glow shadow-glow-brand">
+                    <div class="glass px-3 py-1 rounded-full inline-block mb-4">
+                        <span class="text-cyan-400 text-xs font-bold font-mono">FEATURED SAMPLE</span>
                     </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Mixed-Use Retail Mall</h3>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold">🟡 Medium Risk</span>
-                        </div>
-                        <p class="text-base font-semibold text-gray-700 mb-1">Dubai Marina</p>
-                        <p class="text-sm text-gray-600 mb-4">Plot 567-123, Marina Walk</p>
-
-                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                            <p class="font-semibold text-gray-900 text-sm mb-1">Board Recommendation:</p>
-                            <p class="text-gray-700 text-sm">⚠️ Proceed with Conditions</p>
-                        </div>
-
-                        <h4 class="font-bold text-gray-900 text-sm mb-2">Key Findings:</h4>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-                                </svg>
-                                Civil Defence upgrade (AED 1.2M)
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-                                </svg>
-                                28% rezoning probability
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                3 mitigation strategies
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                AED 8.7M property value
-                            </li>
-                        </ul>
-
-                        <a href="#request" class="block w-full bg-primary text-white text-center py-2 rounded-lg font-semibold text-sm hover:bg-primary-dark transition">
-                            View Similar Assessment
-                        </a>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-display">Retail Mall</h3>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-bold border border-yellow-500/30">
+                            🟡 MEDIUM RISK
+                        </span>
                     </div>
+                    <p class="text-base font-semibold text-gray-300 mb-1">Dubai Marina</p>
+                    <p class="text-sm text-gray-500 mb-4">Plot 567-123, Marina Walk</p>
+
+                    <div class="bg-dark-surface/50 rounded-lg p-4 mb-4 border border-yellow-500/20">
+                        <p class="text-xs font-mono text-gray-400 mb-1">Board Recommendation:</p>
+                        <p class="text-sm text-yellow-400 font-semibold">⚠️ PROCEED WITH CONDITIONS</p>
+                    </div>
+
+                    <ul class="space-y-2 mb-6 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            Civil Defence upgrade (AED 1.2M)
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            28% rezoning probability
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            3 mitigation strategies
+                        </li>
+                    </ul>
+
+                    <a href="#request" class="block w-full btn-neon text-white text-center py-2 rounded-lg font-semibold text-sm">
+                        View Similar Assessment
+                    </a>
                 </div>
 
-                <!-- Sample 3: Warehouse - Red Risk -->
-                <div class="bg-white rounded-2xl shadow-xl border-2 border-gray-100 card-hover">
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold">Logistics Warehouse</h3>
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-xs font-semibold">🔴 High Risk</span>
-                        </div>
-                        <p class="text-base font-semibold text-gray-700 mb-1">Jebel Ali Free Zone</p>
-                        <p class="text-sm text-gray-600 mb-4">Plot 891-456, JAFZA South</p>
-
-                        <div class="bg-gray-50 rounded-lg p-4 mb-4">
-                            <p class="font-semibold text-gray-900 text-sm mb-1">Board Recommendation:</p>
-                            <p class="text-gray-700 text-sm">❌ Do Not Proceed</p>
-                        </div>
-
-                        <h4 class="font-bold text-gray-900 text-sm mb-2">Key Findings:</h4>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
-                                </svg>
-                                72% rezoning probability
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
-                                </svg>
-                                Metro 2040 corridor conflict
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
-                                </svg>
-                                DEWA capacity issues
-                            </li>
-                            <li class="flex items-start text-sm text-gray-700">
-                                <svg class="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-                                </svg>
-                                Alternative sites available
-                            </li>
-                        </ul>
-
-                        <a href="#request" class="block w-full bg-primary text-white text-center py-2 rounded-lg font-semibold text-sm hover:bg-primary-dark transition">
-                            View Similar Assessment
-                        </a>
+                <!-- Warehouse - Red -->
+                <div class="gradient-border p-6 card-glow">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-display">Logistics Hub</h3>
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-bold border border-red-500/30">
+                            🔴 HIGH RISK
+                        </span>
                     </div>
+                    <p class="text-base font-semibold text-gray-300 mb-1">Jebel Ali Free Zone</p>
+                    <p class="text-sm text-gray-500 mb-4">Plot 891-456, JAFZA South</p>
+
+                    <div class="bg-dark-surface/50 rounded-lg p-4 mb-4 border border-red-500/20">
+                        <p class="text-xs font-mono text-gray-400 mb-1">Board Recommendation:</p>
+                        <p class="text-sm text-red-400 font-semibold">❌ DO NOT PROCEED</p>
+                    </div>
+
+                    <ul class="space-y-2 mb-6 text-sm">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-red-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            72% rezoning probability
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-red-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            Metro 2040 corridor conflict
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-4 h-4 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            Alternative sites recommended
+                        </li>
+                    </ul>
+
+                    <a href="#request" class="block w-full bg-red-600 hover:bg-red-500 text-white text-center py-2 rounded-lg font-semibold text-sm transition">
+                        View Similar Assessment
+                    </a>
                 </div>
             </div>
 
             <div class="text-center mt-12">
-                <p class="text-sm text-gray-500 mb-4">⚠️ Sample reports use fictional data for demonstration purposes</p>
-                <a href="#request" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition shadow-lg">
+                <p class="text-sm text-gray-500 mb-6">⚠️ Sample reports use fictional data for demonstration purposes</p>
+                <a href="#request" class="inline-block btn-neon text-white px-8 py-4 rounded-lg font-bold">
                     Request Your Custom Assessment →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Request Assessment Form -->
-    <section id="request" class="py-20 px-4 bg-gray-50">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Request Assessment</h2>
-                <p class="text-xl text-gray-600">Complete this form and we'll send you a detailed questionnaire within 24 hours</p>
+    <!-- Methodology Section (New) -->
+    <section id="methodology" class="py-24 px-4 bg-dark-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-cyan-400 font-mono text-sm tracking-widest mb-4 block">AI-POWERED METHODOLOGY</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">Quantum-Safe Due Diligence</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">Our proprietary assessment framework combines regulatory expertise with AI-driven data analysis</p>
             </div>
 
-            <form id="assessmentForm" class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2 border-primary/10">
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                        <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="glass p-8 rounded-xl card-glow">
+                    <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl border border-purple-600/30">
+                        01
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                        <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                    </div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Data Collection</h3>
+                    <p class="text-gray-400 mb-4">
+                        We analyze 8+ Dubai authorities (DM, ESMA, Civil Defence, RTA, DEWA, Tourism, JAFZA, DIFC) for compliance requirements and existing NOCs.
+                    </p>
+                    <div class="text-sm text-cyan-400 font-mono">Timeline: 1-2 days</div>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                        <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                <!-- Step 2 -->
+                <div class="glass p-8 rounded-xl card-glow">
+                    <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl border border-purple-600/30">
+                        02
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Company Name *</label>
-                        <input type="text" name="company" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                    </div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Risk Modeling</h3>
+                    <p class="text-gray-400 mb-4">
+                        Our AI processes Dubai 2040 Master Plan data, Metro expansions, and historical rezoning patterns to calculate 20-year rezoning probability.
+                    </p>
+                    <div class="text-sm text-cyan-400 font-mono">Timeline: 2-3 days</div>
                 </div>
 
-                <div class="mb-6">
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Property Address (if known)</label>
-                    <input type="text" name="address" placeholder="e.g., Business Bay, Sheikh Zayed Road, Dubai" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                <!-- Step 3 -->
+                <div class="glass p-8 rounded-xl card-glow">
+                    <div class="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-lg flex items-center justify-center mb-4 font-bold text-xl border border-purple-600/30">
+                        03
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 font-display">Board Report</h3>
+                    <p class="text-gray-400 mb-4">
+                        We generate a board-ready 8-page executive summary with Green/Yellow/Red risk rating and actionable Proceed/Conditional/Reject recommendation.
+                    </p>
+                    <div class="text-sm text-cyan-400 font-mono">Timeline: 2-3 days</div>
                 </div>
+            </div>
 
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="mt-12 glass p-8 rounded-xl">
+                <div class="flex items-start space-x-4">
+                    <svg class="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                    </svg>
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Property Type *</label>
-                        <select name="propertyType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                            <option value="">Select...</option>
+                        <h4 class="text-xl font-bold mb-2">Why "Quantum-Safe"?</h4>
+                        <p class="text-gray-400">
+                            Our parent company <strong>Taurus AI</strong> specializes in post-quantum cryptography (PQC) for financial services. We apply the same rigorous, future-proof analytical methodology to property due diligence — ensuring your investment is protected against both regulatory and technological disruption.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section id="request" class="py-24 px-4 bg-dark-bg circuit-bg">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-cyan-400 font-mono text-sm tracking-widest mb-4 block">GET STARTED</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">Request Free Risk Assessment</h2>
+                <p class="text-xl text-gray-400">Complete this 3-field form. We'll send you a detailed questionnaire within 24 hours.</p>
+            </div>
+
+            <form id="assessmentForm" class="gradient-border p-8 md:p-12">
+                <!-- Step 1: Simplified -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Email Address *</label>
+                        <input type="email" name="email" required
+                               class="w-full px-4 py-3 bg-dark-surface border border-dark-border rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent outline-none transition text-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Property Type *</label>
+                        <select name="propertyType" required
+                                class="w-full px-4 py-3 bg-dark-surface border border-dark-border rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent outline-none transition text-white">
+                            <option value="">Select property type...</option>
                             <option value="office">Office</option>
                             <option value="retail">Retail</option>
-                            <option value="industrial">Industrial</option>
+                            <option value="industrial">Industrial/Central Kitchen</option>
                             <option value="warehouse">Warehouse/Logistics</option>
                             <option value="mixed-use">Mixed-Use</option>
                             <option value="hospitality">Hospitality</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
+
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Service Level *</label>
-                        <select name="phase" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                            <option value="">Select...</option>
-                            <option value="phase1">Phase 1: Executive Summary (AED 20K)</option>
-                            <option value="phase2">Phase 2: Full Due Diligence (AED 55K)</option>
-                            <option value="phase3">Phase 3: Investment-Grade (AED 120K)</option>
-                            <option value="phase4">Phase 4: Annual Monitoring (AED 75K/yr)</option>
-                        </select>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Property Location (if known)</label>
+                        <input type="text" name="location"
+                               placeholder="e.g., Business Bay, Al Quoz, Dubai Marina"
+                               class="w-full px-4 py-3 bg-dark-surface border border-dark-border rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent outline-none transition text-white placeholder-gray-500">
                     </div>
                 </div>
 
-                <div class="mb-6">
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Intended Use *</label>
-                    <input type="text" name="intendedUse" required placeholder="e.g., Corporate headquarters, retail center, distribution hub" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Approximate Investment (AED)</label>
-                        <input type="number" name="investment" placeholder="e.g., 45000000" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Report Deadline *</label>
-                        <input type="date" name="deadline" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
-                    </div>
-                </div>
-
-                <div class="mb-8">
-                    <label class="block text-sm font-semibold text-gray-700 mb-2">Specific Concerns or Questions</label>
-                    <textarea name="concerns" rows="4" placeholder="e.g., Concerned about master plan changes, need infrastructure risk assessment, Board decision in 3 weeks" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"></textarea>
-                </div>
-
-                <button type="submit" class="w-full bg-gradient-to-r from-primary to-primary-dark text-white py-4 rounded-lg font-bold text-lg hover:shadow-xl transition transform hover:scale-[1.02]">
-                    Send Request →
+                <button type="submit" class="w-full btn-neon text-white py-4 rounded-lg font-bold text-lg mt-8">
+                    Get Free Risk Assessment →
                 </button>
 
-                <p class="text-center text-sm text-gray-500 mt-4">We'll email you the detailed questionnaire within 24 hours</p>
+                <p class="text-center text-sm text-gray-500 mt-4">
+                    We'll email you the full questionnaire within 24 hours. Your report will be delivered in 5-7 business days after we receive your responses.
+                </p>
             </form>
 
-            <div id="formSuccess" class="hidden bg-green-50 border-2 border-green-500 rounded-2xl p-8 mt-8 text-center">
-                <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div id="formSuccess" class="hidden gradient-border p-8 mt-8 text-center">
+                <svg class="w-16 h-16 text-cyan-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Request Received!</h3>
-                <p class="text-gray-700 mb-4">Thank you for your inquiry. We've sent the detailed property assessment questionnaire to <strong id="confirmEmail"></strong>.</p>
-                <p class="text-gray-600">Please complete and return it within 7 days. Your assessment report will be delivered 5-7 business days after we receive your responses.</p>
-                <p class="text-gray-600 mt-4">Questions? Contact <a href="mailto:admin@taurusai.io" class="text-primary underline">admin@taurusai.io</a></p>
+                <h3 class="text-2xl font-bold mb-2">Request Received!</h3>
+                <p class="text-gray-400 mb-4">
+                    Thank you! We've sent the detailed questionnaire to <strong id="confirmEmail" class="text-cyan-400"></strong>.
+                </p>
+                <p class="text-gray-500">
+                    Please complete and return it within 7 days. Your 8-page executive summary will be delivered 5-7 business days after we receive your responses.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
-                    <p class="text-xl text-gray-600 mb-8">Have questions about our assessment services? We're here to help.</p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-1">Email</h3>
-                                <a href="mailto:admin@taurusai.io" class="text-primary hover:underline">admin@taurusai.io</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-1">Website</h3>
-                                <a href="https://taurusai.io" target="_blank" class="text-primary hover:underline">taurusai.io</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900 mb-1">GitHub</h3>
-                                <a href="https://github.com/Taas-ai/property-assessment-toolkit" target="_blank" class="text-primary hover:underline">Taas-ai/property-assessment-toolkit</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12 bg-gradient-to-br from-primary/5 to-primary-light/10 rounded-2xl p-8 border border-primary/20">
-                        <h3 class="font-bold text-xl mb-4">Resources</h3>
-                        <ul class="space-y-2">
-                            <li><a href="https://www.dm.gov.ae" target="_blank" class="text-gray-700 hover:text-primary transition">→ Dubai Municipality</a></li>
-                            <li><a href="https://www.dubai2040.ae" target="_blank" class="text-gray-700 hover:text-primary transition">→ Dubai 2040 Master Plan</a></li>
-                            <li><a href="https://www.esma.gov.ae" target="_blank" class="text-gray-700 hover:text-primary transition">→ ESMA Food Safety</a></li>
-                            <li><a href="https://github.com/Taas-ai/property-assessment-toolkit" target="_blank" class="text-gray-700 hover:text-primary transition">→ View Templates on GitHub</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
-                    <h3 class="text-2xl font-bold mb-6">Quick Links</h3>
-                    <div class="space-y-6">
-                        <a href="#services" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-transparent hover:border-primary/20">
-                            <h4 class="font-semibold mb-2">View All Services →</h4>
-                            <p class="text-sm text-gray-600">Explore Phase 1-4 assessment options</p>
-                        </a>
-                        <a href="#portfolio" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-transparent hover:border-primary/20">
-                            <h4 class="font-semibold mb-2">Sample Reports →</h4>
-                            <p class="text-sm text-gray-600">See diverse assessment examples</p>
-                        </a>
-                        <a href="#request" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-transparent hover:border-primary/20">
-                            <h4 class="font-semibold mb-2">Request Assessment →</h4>
-                            <p class="text-sm text-gray-600">Start your property evaluation today</p>
-                        </a>
-                        <a href="mailto:admin@taurusai.io" class="block bg-primary text-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                            <h4 class="font-semibold mb-2">Email Us →</h4>
-                            <p class="text-sm text-white/90">admin@taurusai.io</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-12 px-4">
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="py-16 px-4 bg-dark-surface border-t border-dark-border">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
                 <div>
-                    <div class="flex items-baseline space-x-1 mb-4">
-                        <span class="text-2xl font-bold text-primary font-display">BIZ</span>
-                        <span class="text-2xl font-light text-white">FLOW</span>
+                    <div class="flex items-baseline space-x-1 mb-2">
+                        <span class="text-2xl font-bold gradient-text font-display">BizFlow™</span>
                     </div>
-                    <p class="text-gray-400">Professional commercial property assessment consultancy for Dubai and UAE real estate investments.</p>
+                    <div class="text-[10px] text-gray-500 font-mono tracking-[0.2em] mb-4">BY TAURUS AI</div>
+                    <p class="text-gray-400 text-sm">
+                        Dubai's premier quantum-safe property assessment consultancy powered by AI and regulatory expertise.
+                    </p>
                 </div>
+
+                <!-- Services -->
                 <div>
-                    <h4 class="font-bold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#services" class="hover:text-primary transition">Executive Summary</a></li>
-                        <li><a href="#services" class="hover:text-primary transition">Full Due Diligence</a></li>
-                        <li><a href="#services" class="hover:text-primary transition">Investment-Grade</a></li>
-                        <li><a href="#services" class="hover:text-primary transition">Annual Monitoring</a></li>
+                    <h4 class="font-bold text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#services" class="hover:text-cyan-400 transition">Executive Summary</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition">Full Due Diligence</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition">Investment-Grade</a></li>
+                        <li><a href="#services" class="hover:text-cyan-400 transition">Annual Monitoring</a></li>
                     </ul>
                 </div>
+
+                <!-- Resources -->
                 <div>
-                    <h4 class="font-bold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://github.com/Taas-ai/property-assessment-toolkit" target="_blank" class="hover:text-primary transition">GitHub Repository</a></li>
-                        <li><a href="#portfolio" class="hover:text-primary transition">Sample Reports</a></li>
-                        <li><a href="https://www.dm.gov.ae" target="_blank" class="hover:text-primary transition">Dubai Municipality</a></li>
-                        <li><a href="https://www.dubai2040.ae" target="_blank" class="hover:text-primary transition">Dubai 2040</a></li>
+                    <h4 class="font-bold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="https://github.com/Taas-ai/property-assessment-toolkit" target="_blank" class="hover:text-cyan-400 transition">GitHub Repository</a></li>
+                        <li><a href="#portfolio" class="hover:text-cyan-400 transition">Sample Reports</a></li>
+                        <li><a href="https://www.dm.gov.ae" target="_blank" class="hover:text-cyan-400 transition">Dubai Municipality</a></li>
+                        <li><a href="https://www.dubai2040.ae" target="_blank" class="hover:text-cyan-400 transition">Dubai 2040</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact -->
                 <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="mailto:admin@taurusai.io" class="hover:text-primary transition">admin@taurusai.io</a></li>
-                        <li><a href="https://taurusai.io" target="_blank" class="hover:text-primary transition">taurusai.io</a></li>
-                        <li><a href="https://github.com/Taurus-Ai-Corp" target="_blank" class="hover:text-primary transition">GitHub</a></li>
+                    <h4 class="font-bold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>
+                            <a href="mailto:admin@taurusai.io" class="hover:text-cyan-400 transition flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                                admin@taurusai.io
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://taurusai.io" target="_blank" class="hover:text-cyan-400 transition flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
+                                </svg>
+                                taurusai.io
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Taurus-Ai-Corp" target="_blank" class="hover:text-cyan-400 transition flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Taurus-Ai-Corp
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                <p class="mb-2">© 2026 BizFlow™ Property Assessment Consultancy. All rights reserved.</p>
-                <p class="text-xs">Disclaimer: Assessment reports are based on publicly available information and do not constitute legal or financial advice. Verify all findings with relevant authorities before making investment decisions.</p>
+
+            <div class="border-t border-dark-border pt-8 text-center text-gray-500 text-sm">
+                <p class="mb-2">© 2026 BizFlow™ by Taurus AI. All rights reserved.</p>
+                <p class="text-xs">
+                    Disclaimer: Assessment reports are based on publicly available information and do not constitute legal or financial advice.
+                    Verify all findings with relevant authorities before making investment decisions.
+                </p>
             </div>
         </div>
     </footer>
@@ -712,7 +822,6 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu if open
                     document.getElementById('mobileMenu').classList.add('hidden');
                 }
             });
@@ -721,11 +830,10 @@
         // Form Submission
         document.getElementById('assessmentForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
             const formData = new FormData(this);
             const email = formData.get('email');
 
-            // Simulate form submission (in production, send to backend)
+            // Hide form, show success
             document.getElementById('assessmentForm').classList.add('hidden');
             const successDiv = document.getElementById('formSuccess');
             successDiv.classList.remove('hidden');
@@ -735,7 +843,7 @@
             successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
-        // Scroll Animations
+        // Intersection Observer for Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -745,7 +853,7 @@
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.card-hover').forEach(card => {
+        document.querySelectorAll('.card-glow').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'all 0.6s ease';
