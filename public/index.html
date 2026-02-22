@@ -845,15 +845,19 @@
                 });
 
                 if (!res.ok) throw new Error('Submission failed');
-            } catch (err) {
-                console.warn('API submission error:', err.message);
-            }
 
-            form.classList.add('hidden');
-            const success = document.getElementById('formSuccess');
-            success.classList.remove('hidden');
-            document.getElementById('confirmEmail').textContent = data.email;
-            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                form.classList.add('hidden');
+                const success = document.getElementById('formSuccess');
+                success.classList.remove('hidden');
+                document.getElementById('confirmEmail').textContent = data.email;
+                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } catch (err) {
+                btn.textContent = 'Run Free AI Scan';
+                btn.disabled = false;
+                btn.style.background = '#ef4444';
+                btn.textContent = 'Error — Try Again';
+                setTimeout(() => { btn.style.background = ''; btn.textContent = 'Run Free AI Scan'; }, 3000);
+            }
         });
 
         // Intersection Observer for card animations

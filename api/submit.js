@@ -1,6 +1,23 @@
 // Vercel Serverless Function: Form Submission Handler
 // Receives form data, forwards to Google Sheets, sends email notification
 
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+const VALID_PROPERTY_TYPES = [
+  'Office', 'Retail', 'Logistics', 'Industrial',
+  'Mixed-Use', 'Hospitality', 'Healthcare', 'Residential'
+];
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default async function handler(req, res) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +37,18 @@ export default async function handler(req, res) {
 
     if (!email || !propertyType) {
       return res.status(400).json({ error: 'Email and property type are required' });
+    }
+
+    if (!EMAIL_REGEX.test(email) || email.length > 254) {
+      return res.status(400).json({ error: 'Invalid email address' });
+    }
+
+    if (!VALID_PROPERTY_TYPES.includes(propertyType)) {
+      return res.status(400).json({ error: 'Invalid property type' });
+    }
+
+    if (location && location.length > 200) {
+      return res.status(400).json({ error: 'Location too long' });
     }
 
     const timestamp = new Date().toISOString();
@@ -52,13 +81,13 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             from: 'BizFlow <noreply@taurusai.io>',
             to: ['admin@taurusai.io'],
-            subject: `New Assessment Request: ${propertyType} - ${location || 'No location'}`,
+            subject: `New Assessment Request: ${escapeHtml(propertyType)} - ${escapeHtml(location) || 'No location'}`,
             html: `
               <h2>New Property Assessment Request</h2>
               <table style="border-collapse:collapse;width:100%;max-width:500px;">
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Email</td><td style="padding:8px;border:1px solid #ddd;">${email}</td></tr>
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Property Type</td><td style="padding:8px;border:1px solid #ddd;">${propertyType}</td></tr>
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Location</td><td style="padding:8px;border:1px solid #ddd;">${location || 'Not specified'}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Email</td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(email)}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Property Type</td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(propertyType)}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Location</td><td style="padding:8px;border:1px solid #ddd;">${escapeHtml(location) || 'Not specified'}</td></tr>
                 <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Submitted</td><td style="padding:8px;border:1px solid #ddd;">${timestamp}</td></tr>
               </table>
               <p style="margin-top:16px;color:#666;">— BizFlow™ by Taurus AI</p>
@@ -70,8 +99,8 @@ export default async function handler(req, res) {
       }
     }
 
-    // 3. Always log to Vercel function logs
-    console.log('SUBMISSION:', JSON.stringify(submission));
+    // 3. Log submission (no PII)
+    console.log('SUBMISSION:', JSON.stringify({ propertyType, location: location || 'Not specified', timestamp }));
 
     return res.status(200).json({
       success: true,
