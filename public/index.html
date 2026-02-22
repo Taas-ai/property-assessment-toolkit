@@ -6,6 +6,17 @@
     <meta name="description" content="BizFlow™ by Taurus AI - Dubai's premier quantum-safe property assessment consultancy. AI-powered regulatory compliance, Dubai 2040 rezoning risk analysis, and investment-grade due diligence reports.">
     <title>BizFlow™ by Taurus AI | Dubai Property Assessment Consultancy</title>
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="BizFlow™ — Dubai Property Assessment Consultancy">
+    <meta property="og:description" content="AI-powered regulatory compliance, Dubai 2040 rezoning risk analysis, and investment-grade due diligence reports for commercial property investors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://property-assessment-toolkit.vercel.app/">
+    <meta property="og:site_name" content="BizFlow™ by Taurus AI">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="BizFlow™ — Dubai Property Assessment">
+    <meta name="twitter:description" content="AI-powered regulatory compliance and investment-grade due diligence for Dubai commercial properties.">
+    <link rel="canonical" href="https://property-assessment-toolkit.vercel.app/">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -773,6 +784,11 @@
 
             <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
                 <p class="mb-2">&copy; 2026 BizFlow&trade; by Taurus AI. All rights reserved.</p>
+                <p class="mb-3">
+                    <a href="/privacy" class="hover:text-brand-cyan transition">Privacy Policy</a>
+                    <span class="mx-2">&middot;</span>
+                    <a href="/terms" class="hover:text-brand-cyan transition">Terms of Service</a>
+                </p>
                 <p class="text-xs text-slate-600">
                     Disclaimer: Assessment reports are based on publicly available information and do not constitute legal or financial advice.
                     Verify all findings with relevant authorities before making investment decisions.
@@ -800,14 +816,38 @@
             });
         });
 
-        // Form Submission
-        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+        // Form Submission — sends to /api/submit (Vercel serverless function)
+        document.getElementById('assessmentForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            const email = new FormData(this).get('email');
-            this.classList.add('hidden');
+            const form = this;
+            const formData = new FormData(form);
+            const data = {
+                email: formData.get('email'),
+                propertyType: formData.get('propertyType'),
+                location: formData.get('location') || ''
+            };
+
+            // Disable button while submitting
+            const btn = form.querySelector('button[type="submit"]');
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (!res.ok) throw new Error('Submission failed');
+            } catch (err) {
+                console.warn('API submission error:', err.message);
+            }
+
+            form.classList.add('hidden');
             const success = document.getElementById('formSuccess');
             success.classList.remove('hidden');
-            document.getElementById('confirmEmail').textContent = email;
+            document.getElementById('confirmEmail').textContent = data.email;
             success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
