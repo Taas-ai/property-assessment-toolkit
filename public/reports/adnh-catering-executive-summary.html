@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Summary | ADNH Catering - Al Quoz Central Kitchen | BizFlow™</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple-500: #9333EA;
+            --purple-600: #7C3AED;
+            --purple-700: #6D28D9;
+            --cyan-400: #22D3EE;
+            --cyan-500: #06B6D4;
+            --green-500: #22C55E;
+            --yellow-500: #EAB308;
+            --red-500: #EF4444;
+            --slate-50: #F8FAFC;
+            --slate-100: #F1F5F9;
+            --slate-200: #E2E8F0;
+            --slate-300: #CBD5E1;
+            --slate-400: #94A3B8;
+            --slate-500: #64748B;
+            --slate-600: #475569;
+            --slate-700: #334155;
+            --slate-800: #1E293B;
+            --slate-900: #0F172A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--slate-800);
+            background: #fff;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body { font-size: 11px; }
+            .page-break { page-break-before: always; }
+            .no-print { display: none !important; }
+            .report-container { max-width: 100%; padding: 0; }
+            header { position: relative !important; }
+        }
+
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Cover */
+        header {
+            background: linear-gradient(135deg, var(--slate-900) 0%, #1a103d 50%, var(--slate-900) 100%);
+            color: white;
+            padding: 48px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(90deg, rgba(147,51,234,0.08) 1px, transparent 1px),
+                linear-gradient(rgba(147,51,234,0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: -100px; right: -100px;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(147,51,234,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .header-brand-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header-brand-text span {
+            background: linear-gradient(135deg, var(--purple-500), var(--cyan-400));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-brand-sub {
+            font-size: 11px;
+            color: var(--slate-400);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .report-type {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple-500), var(--cyan-500));
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .header-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .header-subtitle {
+            font-size: 18px;
+            color: var(--slate-300);
+            margin-bottom: 32px;
+        }
+
+        .header-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .meta-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px 18px;
+        }
+
+        .meta-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--slate-400);
+            margin-bottom: 4px;
+        }
+
+        .meta-value {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Risk Badge */
+        .risk-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .risk-yellow {
+            background: rgba(234,179,8,0.15);
+            color: #FBBF24;
+            border: 2px solid rgba(234,179,8,0.3);
+        }
+
+        .risk-green {
+            background: rgba(34,197,94,0.15);
+            color: #4ADE80;
+            border: 2px solid rgba(34,197,94,0.3);
+        }
+
+        .risk-red {
+            background: rgba(239,68,68,0.15);
+            color: #F87171;
+            border: 2px solid rgba(239,68,68,0.3);
+        }
+
+        /* Recommendation Badge */
+        .recommendation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(234,179,8,0.1);
+            border: 1px solid rgba(234,179,8,0.3);
+            color: #FBBF24;
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background: var(--slate-50);
+            border-bottom: 1px solid var(--slate-200);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--slate-600);
+            text-decoration: none;
+            border-radius: 6px;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            background: var(--purple-500);
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--slate-200);
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--purple-500);
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--slate-900);
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-desc {
+            color: var(--slate-500);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--slate-800);
+            margin: 24px 0 12px 0;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--slate-700);
+            margin: 16px 0 8px 0;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--slate-700);
+        }
+
+        /* Executive Overview Card */
+        .overview-card {
+            background: linear-gradient(135deg, var(--slate-50), #F5F3FF);
+            border: 1px solid var(--slate-200);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .overview-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--slate-700);
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--purple-500), var(--cyan-500));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--slate-500);
+            margin-top: 4px;
+        }
+
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--slate-200);
+            margin: 16px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        thead {
+            background: var(--slate-800);
+            color: white;
+        }
+
+        th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--slate-100);
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--slate-50);
+        }
+
+        tbody tr:hover {
+            background: #F5F3FF;
+        }
+
+        .status-compliant {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(34,197,94,0.1);
+            color: #16A34A;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .status-review {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(234,179,8,0.1);
+            color: #CA8A04;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .status-noncompliant {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(239,68,68,0.1);
+            color: #DC2626;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .impact-high { color: var(--red-500); font-weight: 700; }
+        .impact-medium { color: var(--yellow-500); font-weight: 700; }
+        .impact-low { color: var(--green-500); font-weight: 700; }
+
+        /* Risk Cards */
+        .risk-card {
+            background: white;
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--red-500);
+        }
+
+        .risk-card.certain {
+            border-left-color: var(--purple-500);
+        }
+
+        .risk-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .risk-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .risk-probability {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .prob-high {
+            background: rgba(239,68,68,0.1);
+            color: var(--red-500);
+        }
+
+        .prob-certain {
+            background: rgba(147,51,234,0.1);
+            color: var(--purple-500);
+        }
+
+        .risk-card p {
+            font-size: 13px;
+            color: var(--slate-600);
+        }
+
+        .mitigation-list {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .mitigation-list li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            font-size: 13px;
+            color: var(--slate-700);
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .mitigation-list li:last-child { border-bottom: none; }
+
+        .mitigation-list li::before {
+            content: '→';
+            position: absolute;
+            left: 8px;
+            color: var(--purple-500);
+            font-weight: 700;
+        }
+
+        /* Compliance Summary */
+        .compliance-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .compliance-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--slate-200);
+        }
+
+        .compliance-box.green { background: rgba(34,197,94,0.05); border-color: rgba(34,197,94,0.2); }
+        .compliance-box.yellow { background: rgba(234,179,8,0.05); border-color: rgba(234,179,8,0.2); }
+        .compliance-box.red { background: rgba(239,68,68,0.05); border-color: rgba(239,68,68,0.2); }
+
+        .compliance-count {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .compliance-box.green .compliance-count { color: var(--green-500); }
+        .compliance-box.yellow .compliance-count { color: var(--yellow-500); }
+        .compliance-box.red .compliance-count { color: var(--red-500); }
+
+        /* Conditions */
+        .condition-card {
+            background: var(--slate-50);
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 12px;
+        }
+
+        .condition-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--purple-500), var(--cyan-500));
+            color: white;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .condition-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--slate-900);
+            display: inline;
+        }
+
+        .condition-details {
+            margin-top: 10px;
+            padding-left: 38px;
+        }
+
+        .condition-details p {
+            font-size: 13px;
+            color: var(--slate-600);
+        }
+
+        .condition-details strong {
+            color: var(--slate-800);
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 10px 0 10px 32px;
+            position: relative;
+            font-size: 13px;
+            border-bottom: 1px solid var(--slate-100);
+        }
+
+        .checklist li::before {
+            content: '☐';
+            position: absolute;
+            left: 4px;
+            font-size: 16px;
+            color: var(--purple-500);
+        }
+
+        /* Opportunity Cards */
+        .opportunity-card {
+            background: linear-gradient(135deg, rgba(34,197,94,0.05), rgba(6,182,212,0.05));
+            border: 1px solid rgba(34,197,94,0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+        }
+
+        .opportunity-card h4 {
+            color: #16A34A;
+            margin-top: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--slate-900), #1a103d);
+            color: white;
+            padding: 48px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+        }
+
+        .cta-section p {
+            color: var(--slate-300);
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .cta-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .cta-item a {
+            color: var(--cyan-400);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--slate-50);
+            border-top: 1px solid var(--slate-200);
+            padding: 32px 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content p {
+            font-size: 11px;
+            color: var(--slate-500);
+        }
+
+        .disclaimer {
+            background: var(--slate-100);
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            font-size: 11px;
+            color: var(--slate-500);
+            line-height: 1.6;
+        }
+
+        /* Download Button */
+        .download-bar {
+            background: linear-gradient(135deg, var(--purple-500), var(--cyan-500));
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+
+        .download-bar button {
+            background: white;
+            color: var(--purple-600);
+            border: none;
+            padding: 8px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            margin: 0 8px;
+        }
+
+        .download-bar button:hover {
+            background: var(--slate-100);
+        }
+
+        .download-bar span {
+            font-size: 13px;
+            margin-right: 16px;
+        }
+
+        /* Phase Table */
+        .phase-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            gap: 16px;
+            padding: 20px;
+            border-bottom: 1px solid var(--slate-100);
+            align-items: start;
+        }
+
+        .phase-row:nth-child(even) {
+            background: var(--slate-50);
+        }
+
+        .phase-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple-500), var(--cyan-500));
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .phase-badge.current {
+            background: var(--green-500);
+        }
+
+        /* Back to top */
+        .back-to-landing {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--slate-400);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 0;
+            margin-bottom: 16px;
+        }
+
+        .back-to-landing:hover { color: var(--purple-500); }
+
+        /* Sample Notice */
+        .sample-notice {
+            background: linear-gradient(135deg, rgba(234,179,8,0.08), rgba(234,179,8,0.03));
+            border: 1px solid rgba(234,179,8,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            display: flex;
+            align-items: start;
+            gap: 12px;
+        }
+
+        .sample-notice-icon { font-size: 24px; }
+
+        .sample-notice p {
+            font-size: 13px;
+            color: var(--slate-600);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Download Bar -->
+<div class="download-bar no-print">
+    <span>BizFlow™ Executive Summary Report</span>
+    <button onclick="window.print()">🖨️ Print / Save PDF</button>
+    <button onclick="window.location.href='/'">← Back to BizFlow™</button>
+</div>
+
+<!-- Header / Cover Page -->
+<header>
+    <div class="report-container header-content">
+        <a href="/" class="back-to-landing no-print">← Back to BizFlow™ by Taurus AI</a>
+
+        <div class="header-brand">
+            <div>
+                <div class="header-brand-text"><span>BizFlow™</span></div>
+                <div class="header-brand-sub">Property Assessment Consultancy</div>
+            </div>
+        </div>
+
+        <div class="report-type">Phase 1 — Executive Summary</div>
+        <h1 class="header-title">ADNH Catering</h1>
+        <p class="header-subtitle">Al Quoz Central Kitchen Facility — Property Assessment</p>
+
+        <div style="display: flex; gap: 16px; margin-bottom: 32px; flex-wrap: wrap;">
+            <div class="risk-badge risk-yellow">🟡 YELLOW — Medium Risk</div>
+            <div class="recommendation-badge">⚠️ PROCEED WITH CONDITIONS</div>
+        </div>
+
+        <div class="header-meta">
+            <div class="meta-item">
+                <div class="meta-label">Client</div>
+                <div class="meta-value">ADNH Catering (Abu Dhabi National Hotels)</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Property</div>
+                <div class="meta-value">Plot 327-1156, Al Quoz Industrial Area 3</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Assessment Date</div>
+                <div class="meta-value">February 15, 2026</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Reference</div>
+                <div class="meta-value" style="font-family: 'JetBrains Mono', monospace;">2026-02-15-327-1156</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Total Investment</div>
+                <div class="meta-value">AED 57,000,000</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Validity</div>
+                <div class="meta-value">90 days (until May 15, 2026)</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Quick Navigation -->
+<nav class="nav-bar no-print">
+    <div class="report-container">
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#property">Property Profile</a></li>
+            <li><a href="#compliance">Regulatory Compliance</a></li>
+            <li><a href="#masterplan">Dubai 2040 Impact</a></li>
+            <li><a href="#infrastructure">Infrastructure Risk</a></li>
+            <li><a href="#findings">Key Findings</a></li>
+            <li><a href="#recommendation">Board Recommendation</a></li>
+            <li><a href="#nextsteps">Next Steps</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="report-container">
+
+    <!-- Sample Notice -->
+    <div class="sample-notice">
+        <div class="sample-notice-icon">⚠️</div>
+        <div>
+            <p><strong>Sample Report Notice:</strong> This is a demonstration report using fictional property details to showcase BizFlow™ assessment methodology and report structure. All data are realistic estimates based on typical Dubai commercial properties but have not been verified with actual authorities. For your actual property assessment, <a href="/#request" style="color: var(--purple-500);">request a custom report</a>.</p>
+        </div>
+    </div>
+
+    <!-- Section 1: Executive Overview -->
+    <section id="overview">
+        <div class="section-label">Executive Overview</div>
+        <h2>Assessment Summary</h2>
+        <p class="section-desc">High-level findings and board-ready recommendation</p>
+
+        <div class="overview-card">
+            <p>The Al Quoz Industrial Area 3 property is suitable for ADNH Catering's central kitchen operations (targeting 500-800 meals/day capacity) with manageable compliance requirements across all five regulatory authorities. Primary concerns include planned Dubai Metro Red Line extension (2029, 500m proximity) creating rezoning pressure toward Transit-Oriented Development, required DEWA electrical infrastructure upgrade (AED 2M investment), and a statistically-derived <strong>35% probability of industrial-to-mixed-use rezoning</strong> over the 20-year investment horizon.</p>
+            <p>Despite these medium-level risks, the property's Light Industrial (Industrial-3) zoning classification, established food production permit framework, and strategic location supporting ADNH's 11 million meals/month UAE-wide operations make it a <strong>viable acquisition with appropriate risk mitigation conditions</strong>.</p>
+        </div>
+
+        <div class="overview-stats">
+            <div class="stat-card">
+                <div class="stat-value">35%</div>
+                <div class="stat-label">20-Year Rezoning Probability</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">AED 2.4M</div>
+                <div class="stat-label">First-Year Compliance Cost</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">500m</div>
+                <div class="stat-label">Metro Station Proximity (2029)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">7-8 yr</div>
+                <div class="stat-label">Projected Payback Period</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Property Profile -->
+    <section id="property" class="page-break">
+        <div class="section-label">Section 1</div>
+        <h2>Property Profile</h2>
+        <p class="section-desc">Location, zoning, and development specifications</p>
+
+        <h3>Location & Identification</h3>
+        <div class="table-container">
+            <table>
+                <tbody>
+                    <tr><td style="width:200px; font-weight:600;">Full Address</td><td>Plot 327-1156, Street 17B, Al Quoz Industrial Area 3, Dubai, UAE</td></tr>
+                    <tr><td style="font-weight:600;">Plot Number</td><td style="font-family:'JetBrains Mono',monospace;">327-1156</td></tr>
+                    <tr><td style="font-weight:600;">Makani Number</td><td style="font-family:'JetBrains Mono',monospace;">2584216352</td></tr>
+                    <tr><td style="font-weight:600;">GPS Coordinates</td><td>25.1234&deg;N, 55.2345&deg;E</td></tr>
+                    <tr><td style="font-weight:600;">Current Zoning</td><td>Light Industrial (Industrial-3) &mdash; Food production permitted</td></tr>
+                    <tr><td style="font-weight:600;">Plot Size</td><td>5,000 sq.m</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Intended Development</h3>
+        <div class="table-container">
+            <table>
+                <tbody>
+                    <tr><td style="width:200px; font-weight:600;">Planned Use</td><td>Commercial central kitchen for hotel catering operations. Facility will prepare 500-800 meals daily for ADNH Catering's hospitality properties across Dubai and Abu Dhabi, supporting the company's current 11M meals/month UAE-wide production capacity.</td></tr>
+                    <tr><td style="font-weight:600;">Purchase Target</td><td>Q2 2026 (May 2026)</td></tr>
+                    <tr><td style="font-weight:600;">Construction</td><td>Q3-Q4 2026 (6 months fit-out)</td></tr>
+                    <tr><td style="font-weight:600;">Operations Launch</td><td>Q1 2027 (January 2027)</td></tr>
+                    <tr><td style="font-weight:600;">Total Investment</td><td><strong>AED 57,000,000</strong> (AED 45M purchase + AED 12M development)</td></tr>
+                    <tr><td style="font-weight:600;">Building Specs</td><td>15,000 sq.m GFA, 2 floors, 12m height</td></tr>
+                    <tr><td style="font-weight:600;">Operations Scale</td><td>150 employees (120 production, 30 admin), 500-800 meals/day baseline (expandable to 1,200), 50 daily deliveries</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Section 3: Regulatory Compliance -->
+    <section id="compliance" class="page-break">
+        <div class="section-label">Section 2</div>
+        <h2>Regulatory Compliance Analysis</h2>
+        <p class="section-desc">Assessment across five Dubai regulatory authorities</p>
+
+        <div class="compliance-summary">
+            <div class="compliance-box green">
+                <div class="compliance-count">2</div>
+                <div style="font-size:12px; color:var(--green-500); font-weight:600;">Compliant</div>
+                <div style="font-size:11px; color:var(--slate-500); margin-top:4px;">DM Zoning, RTA Parking</div>
+            </div>
+            <div class="compliance-box yellow">
+                <div class="compliance-count">3</div>
+                <div style="font-size:12px; color:var(--yellow-500); font-weight:600;">Review Required</div>
+                <div style="font-size:11px; color:var(--slate-500); margin-top:4px;">ESMA, Civil Defence, DEWA</div>
+            </div>
+            <div class="compliance-box red">
+                <div class="compliance-count">0</div>
+                <div style="font-size:12px; color:var(--red-500); font-weight:600;">Non-Compliant</div>
+                <div style="font-size:11px; color:var(--slate-500); margin-top:4px;">No blockers identified</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Authority</th>
+                        <th>Requirement</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dubai Municipality</strong></td>
+                        <td>Industrial zoning classification</td>
+                        <td><span class="status-compliant">&#10003; Compliant</span></td>
+                        <td>I-3 zoning permits food production. NOC: 4-6 weeks, AED 10K-20K. Building Code 2020 Section 4.3 compliance required (ventilation, waterproofing, 3.5m ceiling).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ESMA (Food Safety)</strong></td>
+                        <td>HACCP certification</td>
+                        <td><span class="status-review">&#9888; Review Required</span></td>
+                        <td>HACCP mandatory for &gt;100 meals/day. Timeline: 8-12 weeks. First-year: AED 90K (consultant AED 30K, training AED 15K, inspections AED 12K). Annual: AED 62.5K. NSF-certified equipment required (~20% premium).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dubai Civil Defence</strong></td>
+                        <td>Fire safety, emergency access</td>
+                        <td><span class="status-review">&#9888; Conditional</span></td>
+                        <td>Wet chemical suppression required (Class K fire risk). Cost: AED 150K-250K. Annual inspection: AED 3K. 2-hour fire-rated walls between kitchen and storage. Emergency access compliant (6m road width).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RTA</strong></td>
+                        <td>Parking &amp; traffic impact</td>
+                        <td><span class="status-compliant">&#10003; Compliant</span></td>
+                        <td>350 spaces required, 380 available (surplus). 250 daily trips (below 500-trip TIS threshold). No Traffic Impact Study needed, saving AED 30K-50K.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DEWA</strong></td>
+                        <td>Electrical load, water supply</td>
+                        <td><span class="status-review">&#9888; Review Required</span></td>
+                        <td><strong>Critical:</strong> Existing 1.2 MVA insufficient. Required: 2.0 MVA. Upgrade: AED 1.8M-2.2M + 4-6 months. Water: 640,000 L/day peak. Grease trap: AED 75K.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+            <div style="background:var(--slate-50); border-radius:12px; padding:20px; border:1px solid var(--slate-200);">
+                <h4 style="margin-top:0;">First-Year Compliance Cost</h4>
+                <div style="font-size:28px; font-weight:800; color:var(--purple-500);">AED 2.4M–2.8M</div>
+                <p style="font-size:12px; color:var(--slate-500); margin:0;">DEWA upgrade dominates (AED 1.8M-2.2M)</p>
+            </div>
+            <div style="background:var(--slate-50); border-radius:12px; padding:20px; border:1px solid var(--slate-200);">
+                <h4 style="margin-top:0;">Annual Recurring Cost</h4>
+                <div style="font-size:28px; font-weight:800; color:var(--cyan-500);">AED 80K–95K</div>
+                <p style="font-size:12px; color:var(--slate-500); margin:0;">ESMA renewals, inspections, DEWA tariff</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Dubai 2040 Master Plan -->
+    <section id="masterplan" class="page-break">
+        <div class="section-label">Section 3</div>
+        <h2>Dubai 2040 Master Plan Impact</h2>
+        <p class="section-desc">Rezoning risk, infrastructure projects, and 20-year outlook</p>
+
+        <h3>Current Zoning Status</h3>
+        <p><strong>Designation:</strong> Light Industrial (Industrial-3) within Al Quoz Industrial Area 3<br>
+        <strong>Permitted Uses:</strong> Food production, light manufacturing, warehousing, logistics<br>
+        <strong>2040 Vision:</strong> Al Quoz designated as transitional "Creative &amp; Industrial District" &mdash; gradual shift from pure industrial to mixed-use creative economy over 15-20 years</p>
+
+        <h3>Planned Infrastructure Changes (2025-2045)</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timeframe</th>
+                        <th>Project</th>
+                        <th>Impact</th>
+                        <th>Effect on Property</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>2025-2027</strong></td>
+                        <td>SMB Zayed Road widening (Phase 1)</td>
+                        <td><span class="impact-medium">&#128992; Medium</span></td>
+                        <td>8-month construction disruption. Long-term: improved access, -15% delivery times. May delay Q1 2027 launch by 2-3 months.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2028-2030</strong></td>
+                        <td>Dubai Metro Red Line Extension to Al Quoz</td>
+                        <td><span class="impact-high">&#128308; High</span></td>
+                        <td><strong>Critical Risk:</strong> Station 500m from property. TOD rezoning within 800m radius. 65% of industrial properties near metro rezoned within 5 years. If rezoned: AED 20-30M conversion cost.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2031-2035</strong></td>
+                        <td>Al Khail Road interchange upgrades</td>
+                        <td><span class="impact-low">&#128994; Low</span></td>
+                        <td>Minor traffic improvements, no property impact.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2036-2040</strong></td>
+                        <td>Phase-out of heavy industrial (I-1) in Al Quoz</td>
+                        <td><span class="impact-low">&#128994; Low</span></td>
+                        <td>Does not affect I-3 properties. Food production explicitly retained in Dubai 2040 food security strategy.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2041-2045</strong></td>
+                        <td>Al Quoz Creative District full build-out</td>
+                        <td><span class="impact-medium">&#128992; Medium</span></td>
+                        <td>Residential encroachment may create noise/delivery conflicts. Exit strategy recommended for 2040-2045.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Rezoning Risk Assessment</h3>
+        <div style="background: linear-gradient(135deg, rgba(234,179,8,0.05), rgba(234,179,8,0.02)); border:1px solid rgba(234,179,8,0.2); border-radius:12px; padding:24px; margin:16px 0;">
+            <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+                <div style="font-size:48px; font-weight:800; color:var(--yellow-500);">35%</div>
+                <div>
+                    <div style="font-size:16px; font-weight:700; color:var(--slate-800);">20-Year Rezoning Probability</div>
+                    <div style="font-size:13px; color:var(--slate-500);">Medium Risk (15-45% range)</div>
+                </div>
+            </div>
+            <p style="font-size:13px;"><strong>Calculation:</strong> Base probability (12% historical) + Metro proximity multiplier (+23%) - Food security protection (-5%) = <strong>30-40% (point estimate: 35%)</strong></p>
+            <h4>Key Drivers:</h4>
+            <ol style="padding-left:20px; font-size:13px; color:var(--slate-700);">
+                <li><strong>Metro proximity (500m)</strong> &mdash; Strongest driver, 65% of probability increase</li>
+                <li><strong>Creative district pressure</strong> &mdash; Art galleries, studios creating gentrification precedent</li>
+                <li><strong>TOD policy</strong> &mdash; Dubai 2040 mandates mixed-use within 400-800m metro radius</li>
+                <li><strong>Countervailing:</strong> Dubai food security strategy protects food infrastructure</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Section 5: Infrastructure Risk -->
+    <section id="infrastructure" class="page-break">
+        <div class="section-label">Section 4</div>
+        <h2>Infrastructure Risk Analysis</h2>
+        <p class="section-desc">Metro, roads, utilities, and telecommunications assessment</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Current Status</th>
+                        <th>20-Year Outlook</th>
+                        <th>Risk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Dubai Metro</strong></td>
+                        <td>Red Line ends at UAE Exchange (8km away)</td>
+                        <td>Station 500m from property (Q4 2029). TOD rezoning likely Q1 2030. +40% land value.</td>
+                        <td><span class="impact-high">&#128308; High</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>SMB Zayed Road</strong></td>
+                        <td>6 lanes, moderate congestion</td>
+                        <td>8 lanes by Q4 2027. 26-month construction. Post: -15% delivery times, +20% property value.</td>
+                        <td><span class="impact-medium">&#128992; Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Al Khail Road</strong></td>
+                        <td>Adequate capacity</td>
+                        <td>Interchange upgrades 2031-2035. No direct impact.</td>
+                        <td><span class="impact-low">&#128994; Low</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>DEWA Grid</strong></td>
+                        <td style="color:var(--red-500); font-weight:600;">1.2 MVA (insufficient)</td>
+                        <td>Upgrade to 2.0 MVA required. AED 1.8M-2.2M. 4-6 months.</td>
+                        <td><span class="impact-high">&#128308; High</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Telecom</strong></td>
+                        <td>Etisalat 1Gbps, Du 500Mbps fiber</td>
+                        <td>Stable. 5G coverage active. Exceeds requirements.</td>
+                        <td><span class="impact-low">&#128994; Low</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="background:var(--slate-50); border-radius:12px; padding:20px; margin-top:20px; border:1px solid var(--slate-200);">
+            <h4 style="margin-top:0;">Infrastructure Risk Summary</h4>
+            <p>&#128308; <strong>2 High Risks:</strong> Metro-driven rezoning, DEWA grid capacity &nbsp;&bull;&nbsp; &#128992; <strong>1 Medium Risk:</strong> Road widening disruption &nbsp;&bull;&nbsp; &#128994; <strong>2 Low Risks:</strong> Al Khail Road, telecom</p>
+            <p style="margin:0;"><strong>Aggregate Risk Level: &#128992; Medium</strong> (High risks are mitigable with conditions)</p>
+        </div>
+    </section>
+
+    <!-- Section 6: Key Findings -->
+    <section id="findings" class="page-break">
+        <div class="section-label">Section 5</div>
+        <h2>Key Findings &amp; Recommendations</h2>
+        <p class="section-desc">Critical risks, mitigation strategies, and location advantages</p>
+
+        <h3>Compliance Summary</h3>
+        <ul style="list-style:none; padding:0;">
+            <li style="padding:8px 0; border-bottom:1px solid var(--slate-100);"><span class="status-compliant">&#10003; Compliant</span> <strong>Zoning &amp; Land Use</strong> &mdash; Industrial-3 zoning permits food production without variance</li>
+            <li style="padding:8px 0; border-bottom:1px solid var(--slate-100);"><span class="status-review">&#9888; Review</span> <strong>Regulatory Readiness</strong> &mdash; 8-12 weeks for ESMA HACCP certification; must begin immediately post-purchase</li>
+            <li style="padding:8px 0; border-bottom:1px solid var(--slate-100);"><span class="impact-high" style="font-size:12px;">&#128308; Critical</span> <strong>Infrastructure Gap</strong> &mdash; DEWA 2.0 MVA upgrade (AED 2M, 4-6 months) required before operations</li>
+            <li style="padding:8px 0;"><span class="impact-medium" style="font-size:12px;">&#128992; Medium</span> <strong>Future Viability</strong> &mdash; Medium-term secure (10 years), long-term uncertain (metro impact 2029+)</li>
+        </ul>
+
+        <h3>Critical Risks (Top 3)</h3>
+
+        <div class="risk-card">
+            <div class="risk-card-header">
+                <div class="risk-card-title">1. Metro-Driven Rezoning (2029-2035)</div>
+                <span class="risk-probability prob-high">HIGH (65%)</span>
+            </div>
+            <p>Dubai Metro Red Line extension (station 500m, opens Q4 2029) triggers TOD rezoning pressure. 65% of industrial properties near metro stations rezoned within 5 years. If rezoned: AED 20-30M conversion cost or forced sale.</p>
+            <h4>Mitigation Strategies:</h4>
+            <ul class="mitigation-list">
+                <li><strong>Rezoning protection clause</strong> in purchase agreement: Seller refunds AED 20M if industrial use prohibited within 10 years</li>
+                <li><strong>5-year lease-back option:</strong> Right to sell back at 110% purchase price if metro station opens &lt;600m</li>
+                <li><strong>Adaptive reuse design:</strong> Building designed for easy conversion (removable equipment, flexible floor plan)</li>
+                <li><strong>Early exit strategy:</strong> Plan to sell 2030-2032 before rezoning formalizes</li>
+            </ul>
+        </div>
+
+        <div class="risk-card certain">
+            <div class="risk-card-header">
+                <div class="risk-card-title">2. DEWA Electrical Infrastructure Upgrade</div>
+                <span class="risk-probability prob-certain">CERTAIN (100%)</span>
+            </div>
+            <p>Existing 1.2 MVA insufficient. Required: 2.0 MVA (ovens 800kW, cold storage 400kW, HVAC 600kW). Capital cost AED 1.8M-2.2M, timeline 4-6 months. Delay = AED 2-3M revenue loss.</p>
+            <h4>Mitigation Strategies:</h4>
+            <ul class="mitigation-list">
+                <li><strong>Concurrent application:</strong> Submit DEWA upgrade with purchase agreement (6-month buffer)</li>
+                <li><strong>Expedited review:</strong> AED 50K priority fee reduces timeline to 3 months</li>
+                <li><strong>Contingency clause:</strong> Purchase contingent on DEWA approval</li>
+                <li><strong>Backup generators:</strong> AED 200K rental as 3-month contingency</li>
+            </ul>
+        </div>
+
+        <div class="risk-card certain">
+            <div class="risk-card-header">
+                <div class="risk-card-title">3. ESMA HACCP Certification Timeline</div>
+                <span class="risk-probability prob-certain">CERTAIN (100%)</span>
+            </div>
+            <p>HACCP mandatory for &gt;100 meals/day. Process: consultant (AED 30K) + HACCP plan (3-4 wks) + training (AED 15K, 2-3 wks) + inspection (1 wk) + issuance (1-2 wks) = 8-12 weeks total.</p>
+            <h4>Mitigation Strategies:</h4>
+            <ul class="mitigation-list">
+                <li><strong>Pre-purchase consultant:</strong> Engage during due diligence period</li>
+                <li><strong>Parallel training:</strong> Train 30 employees during Q4 2026 fit-out</li>
+                <li><strong>Pre-opening inspection:</strong> Schedule for December 2026</li>
+                <li><strong>Contingency staffing:</strong> AED 50K for temporary HACCP-certified supervisors</li>
+            </ul>
+        </div>
+
+        <h3>Opportunities (Location Advantages)</h3>
+        <div class="opportunity-card">
+            <h4>&#9989; Strategic Positioning for ADNH's UAE Network</h4>
+            <p>Al Quoz provides 30-minute delivery radius to 80% of ADNH's Dubai hospitality properties. <strong>20% logistics cost savings</strong> vs. alternative Jebel Ali location (AED 1.2M annual savings).</p>
+        </div>
+        <div class="opportunity-card">
+            <h4>&#9989; Industrial-3 Zoning Stability (Short-Medium Term)</h4>
+            <p>Only 12% of I-3 properties rezoned since 2000 (vs. 35% I-1). Dubai 2040 food security strategy explicitly protects food production. <strong>10-year operating certainty</strong> sufficient for 7-8 year payback.</p>
+        </div>
+        <div class="opportunity-card">
+            <h4>&#9989; Expansion Capacity</h4>
+            <p>5,000 sq.m plot allows vertical expansion (add 3rd floor for +50% capacity). Building permit allows up to 18m (current 12m). Supports ADNH's growth from 11M to 16M meals/month by 2030.</p>
+        </div>
+    </section>
+
+    <!-- Section 7: Board Recommendation -->
+    <section id="recommendation" class="page-break">
+        <div class="section-label">Section 6</div>
+        <h2>Board Recommendation</h2>
+        <p class="section-desc">Formal recommendation with conditions for ADNH Catering board approval</p>
+
+        <div style="background: linear-gradient(135deg, rgba(234,179,8,0.08), rgba(234,179,8,0.03)); border:2px solid rgba(234,179,8,0.3); border-radius:16px; padding:32px; margin:20px 0; text-align:center;">
+            <div style="font-size:48px; margin-bottom:8px;">&#9888;&#65039;</div>
+            <div style="font-size:24px; font-weight:800; color:var(--slate-900);">PROCEED WITH CONDITIONS</div>
+            <div style="font-size:14px; color:var(--yellow-500); font-weight:600; margin-top:4px;">Medium Risk — 5 Conditions Required</div>
+        </div>
+
+        <p>The Al Quoz Industrial Area 3 property presents a <strong>viable but risk-managed investment opportunity</strong>. The property satisfies ADNH's core requirements: (1) Light Industrial zoning permitting food production, (2) strategic location enabling 30-minute delivery to 80% of Dubai properties, (3) sufficient scale for 500-800 meals/day with expansion to 1,200, and (4) compliance pathway across all five regulatory authorities.</p>
+
+        <p>The <strong>Medium Risk rating</strong> reflects two critical concerns: (1) <strong>Metro-driven rezoning risk</strong> (65% probability by 2035, potentially prohibiting industrial operations), and (2) <strong>DEWA infrastructure gap</strong> (AED 2M upgrade, 4-6 month timeline). The short-to-medium-term investment case (10 years) remains strong with 12% historical I-3 rezoning rate and Dubai 2040 food security protections.</p>
+
+        <p>The five conditions below collectively reduce worst-case loss exposure from <strong>AED 20M to AED 5M</strong> while preserving full upside potential.</p>
+
+        <h3>Conditions</h3>
+
+        <div class="condition-card">
+            <span class="condition-number">1</span>
+            <span class="condition-title">Rezoning Protection Clause in Purchase Agreement</span>
+            <div class="condition-details">
+                <p><strong>Requirement:</strong> Seller provides written guarantee &mdash; if Dubai Municipality rezones property to prohibit industrial/food production within 10 years (before Feb 2036), seller refunds AED 20M.</p>
+                <p><strong>Mechanism:</strong> Escrow account holding AED 20M for 10 years, released to seller in 2036 if no rezoning.</p>
+                <p><strong>Rationale:</strong> Transfers rezoning risk from ADNH to seller. Reduces worst-case loss from AED 20M to AED 0.</p>
+            </div>
+        </div>
+
+        <div class="condition-card">
+            <span class="condition-number">2</span>
+            <span class="condition-title">5-Year Lease-Back Option (Metro Trigger)</span>
+            <div class="condition-details">
+                <p><strong>Requirement:</strong> ADNH retains right to sell property back at 110% purchase price (AED 49.5M) if Metro station opens within 600m before Dec 31, 2032.</p>
+                <p><strong>Window:</strong> Exercise within 24 months of Metro station announcement.</p>
+                <p><strong>Rationale:</strong> Early exit mechanism. Seller still benefits from metro-driven +40% land appreciation.</p>
+            </div>
+        </div>
+
+        <div class="condition-card">
+            <span class="condition-number">3</span>
+            <span class="condition-title">DEWA Upgrade Completion Contingency</span>
+            <div class="condition-details">
+                <p><strong>Requirement:</strong> Purchase closing contingent on DEWA providing written confirmation of 2.0 MVA upgrade within 90 days of agreement signing.</p>
+                <p><strong>Timeline:</strong> DEWA application within 14 days, expedited review fee AED 50K.</p>
+                <p><strong>Rationale:</strong> Protects against purchasing property that cannot support operations. Auto-terminates with full refund if denied.</p>
+            </div>
+        </div>
+
+        <div class="condition-card">
+            <span class="condition-number">4</span>
+            <span class="condition-title">ESMA HACCP Pre-Certification</span>
+            <div class="condition-details">
+                <p><strong>Requirement:</strong> Engage ESMA-accredited HACCP consultant within 14 days of agreement signing.</p>
+                <p><strong>Budget:</strong> AED 40K (consultant AED 30K + AED 10K contingency).</p>
+                <p><strong>Rationale:</strong> Overlaps HACCP timeline with due diligence. AED 40K is acceptable insurance against AED 2-3M revenue delay.</p>
+            </div>
+        </div>
+
+        <div class="condition-card">
+            <span class="condition-number">5</span>
+            <span class="condition-title">Adaptive Reuse Design for Future Optionality</span>
+            <div class="condition-details">
+                <p><strong>Requirement:</strong> Building design enables cost-effective conversion to office/retail (target: &lt;AED 15M vs. AED 25-30M traditional).</p>
+                <p><strong>Elements:</strong> Removable equipment (-AED 5M), 8x8m grid floor plan (-AED 3M), office-grade finishes (-AED 2M), oversized HVAC (-AED 2M).</p>
+                <p><strong>Budget impact:</strong> +AED 1.5M upfront, saves AED 12M if conversion needed (net AED 10.5M savings).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Next Steps -->
+    <section id="nextsteps" class="page-break">
+        <div class="section-label">Section 7</div>
+        <h2>Next Steps &amp; Follow-up Services</h2>
+        <p class="section-desc">Immediate actions and service roadmap</p>
+
+        <h3>Immediate Actions (60-Day Due Diligence Period)</h3>
+        <ul class="checklist">
+            <li><strong>Request NOCs</strong> from all authorities (DM, ESMA, Civil Defence, RTA, DEWA) &mdash; Timeline: 2 weeks</li>
+            <li><strong>DLD title deed verification</strong> &mdash; Verify ownership, encumbrances, liens &mdash; AED 2,000 &mdash; 1 week</li>
+            <li><strong>Pre-application meetings</strong> with DM (zoning), DEWA (upgrade feasibility), ESMA (HACCP) &mdash; 3 weeks</li>
+            <li><strong>Engage HACCP consultant</strong> (ESMA-accredited) &mdash; Begin plan development during due diligence &mdash; AED 40K</li>
+            <li><strong>Submit DEWA 2.0 MVA upgrade application</strong> &mdash; Concurrent with purchase &mdash; Expedited fee: AED 50K</li>
+            <li><strong>Phase I Environmental Site Assessment</strong> &mdash; Soil/groundwater contamination check &mdash; AED 25K &mdash; 3 weeks</li>
+            <li><strong>Traffic consultant</strong> (if operations scale to &gt;500 trips/day) &mdash; Currently 250 trips, no TIS required</li>
+            <li><strong>Finalize purchase agreement</strong> with 5 conditions outlined in Board Recommendation</li>
+        </ul>
+
+        <h3 style="margin-top:32px;">Follow-up Service Roadmap</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Deliverable</th>
+                        <th>Timeline</th>
+                        <th>Investment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background:rgba(34,197,94,0.05);">
+                        <td><span class="phase-badge current">PHASE 1 &#10003;</span></td>
+                        <td><strong>Executive Summary</strong> &mdash; This report (complete). Decision-ready overview, risk rating, 5 conditions.</td>
+                        <td>5-7 days</td>
+                        <td><strong>AED 20,000</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">PHASE 2</span></td>
+                        <td><strong>Full Due Diligence</strong> &mdash; 25-30 page assessment. Site visit, financial modeling, legal verification, environmental assessment, 50+ regulatory citations.</td>
+                        <td>3-4 weeks</td>
+                        <td><strong>AED 55,000</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">PHASE 3</span></td>
+                        <td><strong>Investment-Grade</strong> &mdash; 50-60 page institutional report. Alternative site analysis, 10-year financial model, expert witness statement, Board presentation deck, 2-hour Q&A session.</td>
+                        <td>6-8 weeks</td>
+                        <td><strong>AED 120,000</strong></td>
+                    </tr>
+                    <tr>
+                        <td><span class="phase-badge">PHASE 4</span></td>
+                        <td><strong>Annual Monitoring</strong> &mdash; Quarterly updates, regulatory alerts (48hr), annual reassessment, compliance audit, priority support (24hr response).</td>
+                        <td>12 months</td>
+                        <td><strong>AED 75,000/yr</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Proceed?</h2>
+        <p>Contact BizFlow™ to begin Phase 2 Full Due Diligence or discuss custom requirements.</p>
+        <div class="cta-grid">
+            <div class="cta-item">
+                <div style="font-size:24px; margin-bottom:8px;">&#128231;</div>
+                <div style="font-size:12px; color:var(--slate-400); margin-bottom:4px;">Email</div>
+                <a href="mailto:admin@taurusai.io">admin@taurusai.io</a>
+            </div>
+            <div class="cta-item">
+                <div style="font-size:24px; margin-bottom:8px;">&#127760;</div>
+                <div style="font-size:12px; color:var(--slate-400); margin-bottom:4px;">Website</div>
+                <a href="https://property-assessment-toolkit.vercel.app">BizFlow™ Portal</a>
+            </div>
+            <div class="cta-item">
+                <div style="font-size:24px; margin-bottom:8px;">&#128222;</div>
+                <div style="font-size:12px; color:var(--slate-400); margin-bottom:4px;">Phone</div>
+                <a href="tel:+971000000000">+971-X-XXX-XXXX</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="report-container footer-content">
+        <p><strong>Prepared by:</strong> BizFlow™ by Taurus AI &mdash; Property Assessment Consultancy</p>
+        <p><strong>Lead Analyst:</strong> Urban Planning Consultant (Dubai Municipality Registered)</p>
+        <p><strong>Date:</strong> February 15, 2026 &nbsp;|&nbsp; <strong>Validity:</strong> 90 days (until May 15, 2026)</p>
+        <p><strong>Reference:</strong> 2026-02-15-327-1156</p>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This report is based on information current as of February 15, 2026 and publicly available regulatory documents from Dubai Municipality, ESMA, Dubai Civil Defence, RTA, DEWA, and Dubai 2040 Urban Master Plan. ADNH Catering should verify all findings with relevant authorities before making final investment decisions. This report does not constitute legal advice (consult legal counsel for purchase agreement) or financial advice (consult CFO/financial advisor for investment approval). BizFlow™ by Taurus AI provides regulatory and urban planning analysis only. Professional Indemnity Insurance: AED 5M coverage.
+        </div>
+
+        <p style="margin-top:16px;">&copy; 2026 BizFlow&trade; by Taurus AI. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
