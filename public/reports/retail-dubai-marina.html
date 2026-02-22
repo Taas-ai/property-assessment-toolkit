@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Complex Assessment: Dubai Marina | BizFlow™ Property Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'primary': '#9333EA', 'accent': '#22D3EE', 'dark': '#0F172A', 'surface': '#F8FAFC' },
+                fontFamily: { 'display': ['Space Grotesk','sans-serif'], 'body': ['Inter','sans-serif'] }
+            }}
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg,#9333EA,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-primary { background: linear-gradient(135deg,#9333EA 0%,#7C3AED 50%,#06B6D4 100%); box-shadow: 0 4px 14px rgba(147,51,234,0.3); }
+        .btn-primary:hover { box-shadow: 0 6px 20px rgba(147,51,234,0.5); transform: translateY(-1px); }
+        .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-35deg); font-size: 6rem; font-weight: 800; color: rgba(147,51,234,0.04); pointer-events: none; z-index: 0; letter-spacing: 0.1em; }
+        .dot-green { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #22C55E; }
+        .dot-amber { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; }
+        .dot-red { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #EF4444; }
+    </style>
+</head>
+<body class="bg-white text-slate-700 antialiased">
+    <div class="watermark">SAMPLE REPORT</div>
+
+    <!-- Nav -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <span class="text-xl font-bold font-display gradient-text">BizFlow&trade;</span>
+                <span class="text-[9px] text-slate-400 font-mono tracking-widest">BY TAURUS AI</span>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-sm text-slate-500 hover:text-primary transition">&larr; Back to Home</a>
+                <a href="/#request" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Request Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-purple-50 via-white to-cyan-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-4">SAMPLE REPORT &mdash; PHASE 1</div>
+            <h1 class="text-4xl md:text-5xl font-bold font-display text-dark mb-4">Retail Complex Assessment:<br/>Dubai Marina</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8">Mixed-use retail podium &bull; Plot Area 4,200 sq.m &bull; Zoning: Mixed-Use (MU-1)</p>
+
+            <!-- Risk Badge -->
+            <div class="inline-flex items-center bg-green-50 border border-green-200 rounded-2xl px-6 py-3 mb-10">
+                <span class="dot-green mr-3"></span>
+                <div class="text-left">
+                    <div class="text-xs text-green-600 font-semibold uppercase tracking-wider">Risk Rating</div>
+                    <div class="text-xl font-bold text-green-700">LOW &mdash; 78/100</div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-8">
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">6</div>
+                    <div class="text-xs text-slate-400">Authorities</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">4,200</div>
+                    <div class="text-xs text-slate-400">Plot (sq.m)</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">MU-1</div>
+                    <div class="text-xs text-slate-400">Zoning</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">62</div>
+                    <div class="text-xs text-slate-400">Retail Units</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-6">Executive Summary</h2>
+            <div class="prose max-w-none text-slate-600 leading-relaxed space-y-4">
+                <p>This Phase 1 Executive Summary evaluates a mixed-use retail podium development situated along the Dubai Marina waterfront promenade, occupying a 4,200 sq.m plot zoned Mixed-Use (MU-1) under Emaar Master Developer guidelines and Dubai Municipality regulations. The property comprises a 3-level podium (G+2) with 62 individual retail units totaling 8,400 sq.m of net leasable area, anchored by waterfront F&B outlets, a boutique cinema operator, and a 1,200 sq.m fitness center.</p>
+                <p>The assessment assigns a <strong>LOW risk rating (Score: 78/100)</strong>, reflecting strong regulatory compliance across most authorities. The primary considerations are: (1) tourism license renewal requirements for 14 units operating under DTCM permits, (2) F&B density limits under DM Circular 2024-09 which may constrain the conversion of two vacant retail units to restaurant use, and (3) marina access and mooring regulations that affect the planned floating deck extension.</p>
+                <p>The property's waterfront positioning, 94% occupancy rate, and proximity to Dubai Marina Metro station and the Marina Tram make it an attractive acquisition with manageable regulatory requirements. Annual footfall exceeds 3.2 million visitors, supported by the 85,000-resident Dubai Marina community and tourism traffic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Property Details</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-semibold text-dark mb-4 text-sm uppercase tracking-wider">Location & Classification</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="text-slate-500">Address</span><span class="font-medium text-dark">Plot MR-1184, Dubai Marina, Dubai</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Community</span><span class="font-medium text-dark">Dubai Marina</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Title Deed No.</span><span class="font-medium text-dark">312-2016-DM (Freehold)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Zoning</span><span class="font-medium text-dark">Mixed-Use (MU-1)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Master Developer</span><span class="font-medium text-dark">Emaar Properties</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Waterfront</span><span class="font-medium text-dark">120m marina frontage</span></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-semibold text-dark mb-4 text-sm uppercase tracking-wider">Building Specifications</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="text-slate-500">Plot Area</span><span class="font-medium text-dark">4,200 sq.m</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Net Leasable Area</span><span class="font-medium text-dark">8,400 sq.m</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Configuration</span><span class="font-medium text-dark">G + 2 Podium</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Retail Units</span><span class="font-medium text-dark">62 units</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Parking</span><span class="font-medium text-dark">280 bays (shared podium)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Year Built</span><span class="font-medium text-dark">2017</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Occupancy</span><span class="font-medium text-dark">94% (58/62 units)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Compliance Matrix -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-3">Regulatory Compliance Matrix</h2>
+            <p class="text-slate-500 mb-8">Assessment of 6 regulatory authorities with pass/review/fail determinations.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-slate-50 text-left">
+                            <th class="px-4 py-3 font-semibold text-dark">Authority</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Scope</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-center">Status</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Key Finding</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-right">Est. Cost (AED)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Dubai Municipality (DM)</td>
+                            <td class="px-4 py-3 text-slate-500">Building permits, F&B density, signage</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-amber"></span></td>
+                            <td class="px-4 py-3 text-slate-600">F&B density at 38% of NLA vs. 40% max (DM Circular 2024-09); proposed Unit 47/48 F&B conversion would exceed limit. Signage permits current.</td>
+                            <td class="px-4 py-3 text-right font-medium">120,000</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">ESMA</td>
+                            <td class="px-4 py-3 text-slate-500">Product safety, labeling compliance</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">All installed products and equipment bear valid ESMA conformity certificates. Food safety equipment in F&B outlets verified Q1 2026.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Civil Defence</td>
+                            <td class="px-4 py-3 text-slate-500">Fire safety, evacuation, crowd mgmt</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Current fire safety certificate (FSC-2025-8842). Cinema operator holds separate crowd management approval. Emergency evacuation plan updated for waterfront scenarios.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">RTA</td>
+                            <td class="px-4 py-3 text-slate-500">Access, parking, traffic, marine transport</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Adequate parking ratio (1:30 sq.m vs. required 1:35 sq.m for MU-1). Marine transport berth NOC valid. Tram stop within 200m.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">DEWA</td>
+                            <td class="px-4 py-3 text-slate-500">Electricity, water, cooling</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Connected to Empower district cooling. 3.2 MVA allocation sufficient. DEWA smart meter rollout complete. Green building surcharge paid.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">DTCM</td>
+                            <td class="px-4 py-3 text-slate-500">Tourism licensing, hospitality permits</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-amber"></span></td>
+                            <td class="px-4 py-3 text-slate-600">14 units require DTCM tourism activity permits; 11 current, 3 approaching renewal (Q2 2026). Tourism levy compliance verified. Outdoor seating requires annual marina authority renewal.</td>
+                            <td class="px-4 py-3 text-right font-medium">85,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-slate-50 font-semibold">
+                            <td class="px-4 py-3 text-dark" colspan="2">Total Estimated Compliance Cost</td>
+                            <td class="px-4 py-3 text-center">
+                                <span class="dot-green mr-1"></span>4
+                                <span class="dot-amber mx-1"></span>2
+                                <span class="dot-red ml-1"></span>0
+                            </td>
+                            <td class="px-4 py-3"></td>
+                            <td class="px-4 py-3 text-right text-dark">AED 205,000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waterfront & Tourism Considerations -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Waterfront Development Considerations</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-cyan-50 text-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">&#9875;</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">Marina Access & Mooring Regulations</h3>
+                            <p class="text-sm text-slate-600 mb-3">The property's 120m marina frontage is governed by the Dubai Maritime City Authority (DMCA) under Federal Law No. 26 of 1981 (Maritime Law) and DMCA Regulation 2023-14. Current permits allow for 4 temporary mooring points for water taxi and ferry access. The proposed floating deck extension (200 sq.m) requires a separate DMCA marine construction permit with environmental impact assessment &mdash; estimated timeline of 6&ndash;8 months and cost of AED 350,000&ndash;500,000.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-cyan-50 text-cyan-700 px-3 py-1 rounded-full font-semibold">FUTURE ENHANCEMENT</span>
+                                <span class="text-slate-400">Revenue uplift potential: AED 1.2M/year</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">&#9733;</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">F&B Density Limit Constraint</h3>
+                            <p class="text-sm text-slate-600 mb-3">Dubai Municipality Circular 2024-09 caps F&B use at 40% of total NLA in mixed-use waterfront developments. The property currently allocates 3,192 sq.m (38%) to F&B operators. Converting the two vacant units (Units 47 &amp; 48, totaling 340 sq.m) to restaurant use would push F&B density to 42%, exceeding the cap. Alternative uses such as wellness, experiential retail, or co-working should be explored for these units.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-semibold">PLANNING CONSTRAINT</span>
+                                <span class="text-slate-400">Affects 2 vacant units (340 sq.m)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">&#10003;</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">Tourism License Portfolio</h3>
+                            <p class="text-sm text-slate-600 mb-3">14 tenants operate under DTCM tourism activity permits (Category: Retail &amp; Leisure). 11 permits are current through Q4 2026. Three permits (Tenants: Marina Boutique, Coastal Gifts, AquaSport Rentals) expire in Q2 2026 and require renewal applications at least 60 days prior. The landlord's tourism levy payments (2% of qualifying revenue) are current through 2025, with 2026 filings due by March 31.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full font-semibold">MANAGEABLE</span>
+                                <span class="text-slate-400">Renewal cost: AED 85K (3 permits)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dubai 2040 Impact -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-6">Dubai 2040 Urban Master Plan Impact</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-green-50 rounded-xl border border-green-100 p-6 text-center">
+                    <div class="text-2xl font-bold text-green-700 mb-1">VERY LOW</div>
+                    <div class="text-xs text-green-600 font-semibold uppercase tracking-wider">Rezoning Risk</div>
+                    <p class="text-xs text-slate-500 mt-2">Dubai Marina designated as a "Mature Waterfront Community" &mdash; protected mixed-use zoning through 2040.</p>
+                </div>
+                <div class="bg-green-50 rounded-xl border border-green-100 p-6 text-center">
+                    <div class="text-2xl font-bold text-green-700 mb-1">STRONG</div>
+                    <div class="text-xs text-green-600 font-semibold uppercase tracking-wider">Tourism Growth</div>
+                    <p class="text-xs text-slate-500 mt-2">Marina Walk expansion plan adds 2.4km of pedestrian waterfront by 2030, directly benefiting ground-floor retail.</p>
+                </div>
+                <div class="bg-green-50 rounded-xl border border-green-100 p-6 text-center">
+                    <div class="text-2xl font-bold text-green-700 mb-1">POSITIVE</div>
+                    <div class="text-xs text-green-600 font-semibold uppercase tracking-wider">Transport Links</div>
+                    <p class="text-xs text-slate-500 mt-2">Dubai Marina Metro station upgrade and marina water bus network expansion planned for 2028.</p>
+                </div>
+            </div>
+            <div class="bg-slate-50 rounded-xl border border-slate-200 p-6">
+                <h3 class="font-bold text-dark mb-3">Market Outlook</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Dubai Marina continues to rank among the top 3 most-visited waterfront destinations in the UAE, with annual tourist footfall of 12.8 million (2025). The Dubai 2040 Plan's emphasis on quality-of-life infrastructure, including the expanded marina promenade, new public parks, and enhanced public transport connectivity, is expected to sustain premium retail rents in the range of AED 2,800&ndash;3,400/sq.m. The planned Ain Dubai pedestrian link (completion 2029) will further integrate Bluewaters Island traffic into the Marina retail ecosystem, potentially adding 800,000+ annual visitors to the property's catchment area.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Recommendation -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Board Recommendation</h2>
+            <div class="bg-white rounded-2xl border-2 border-green-200 p-8">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center">
+                        <span class="text-3xl font-bold text-green-700">&#10003;</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-green-600 font-bold uppercase tracking-wider">Recommendation</div>
+                        <div class="text-2xl font-bold text-dark font-display">PROCEED</div>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm text-slate-600">
+                    <p>The property presents a low-risk acquisition opportunity with strong waterfront fundamentals, high occupancy, and manageable compliance requirements. The following items should be addressed as part of standard due diligence:</p>
+                    <ol class="list-decimal list-inside space-y-2 ml-4">
+                        <li><strong>DTCM Permit Renewals:</strong> Ensure the 3 expiring tourism permits are renewed prior to or concurrent with closing to maintain uninterrupted tenant operations.</li>
+                        <li><strong>F&B Density Cap:</strong> Accept the DM 40% F&B density constraint as a permanent planning limitation and market the 2 vacant units for non-F&B tenants (wellness, experiential retail, or co-working are recommended).</li>
+                        <li><strong>Floating Deck Extension:</strong> If the buyer intends to pursue the waterfront deck expansion, budget AED 350K&ndash;500K for DMCA permits and factor in a 6&ndash;8 month approval timeline post-acquisition.</li>
+                    </ol>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-100">
+                    <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Total Compliance Cost</div>
+                            <div class="font-bold text-dark text-lg">AED 205K</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Estimated Yield</div>
+                            <div class="font-bold text-dark text-lg">7.8%</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Vacancy Risk</div>
+                            <div class="font-bold text-green-600 text-lg">LOW (6%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-6">NEXT STEP</div>
+            <h2 class="text-3xl font-bold font-display text-dark mb-4">Ready to Invest?</h2>
+            <p class="text-slate-500 mb-8">This Executive Summary confirms low risk. Upgrade to Phase 2: Due Diligence for tenant lease audits, waterfront permit deep-dive, and detailed financial modeling.</p>
+            <a href="/services/phase-2-due-diligence.html" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg inline-block transition">Explore Phase 2: Due Diligence &rarr;</a>
+            <p class="text-xs text-slate-400 mt-4">Or email us directly at <a href="mailto:admin@taurusai.io" class="text-primary">admin@taurusai.io</a></p>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-8 bg-surface border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs text-slate-400 leading-relaxed"><strong>DISCLAIMER:</strong> This is a <strong>SAMPLE REPORT</strong> created for demonstration purposes only. All property details, regulatory references, authority findings, risk ratings, financial figures, and recommendations contained herein are <strong>entirely fictional</strong>. No real property, entity, or regulatory filing is represented. This document should not be used for any investment, legal, or compliance decision. Actual BizFlow&trade; reports are based on verified data from relevant Dubai authorities and tailored to specific properties.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="font-display font-bold text-lg mb-2 gradient-text">BizFlow&trade;</p>
+            <p class="text-slate-400 text-sm mb-4">Property Assessment by TAURUS AI Corp</p>
+            <div class="flex justify-center space-x-6 text-sm text-slate-500">
+                <a href="/" class="hover:text-accent transition">Home</a>
+                <a href="/services/phase-1-executive-summary.html" class="hover:text-accent transition">Phase 1</a>
+                <a href="/services/phase-2-due-diligence.html" class="hover:text-accent transition">Phase 2</a>
+                <a href="/services/phase-3-investment-grade.html" class="hover:text-accent transition">Phase 3</a>
+                <a href="/services/phase-4-annual-monitoring.html" class="hover:text-accent transition">Phase 4</a>
+                <a href="mailto:admin@taurusai.io" class="hover:text-accent transition">Contact</a>
+            </div>
+            <p class="text-xs text-slate-600 mt-6">&copy; 2026 BizFlow&trade; by Taurus AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

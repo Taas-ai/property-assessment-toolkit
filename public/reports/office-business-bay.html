@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Tower Assessment: Business Bay | BizFlow™ Property Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'primary': '#9333EA', 'accent': '#22D3EE', 'dark': '#0F172A', 'surface': '#F8FAFC' },
+                fontFamily: { 'display': ['Space Grotesk','sans-serif'], 'body': ['Inter','sans-serif'] }
+            }}
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg,#9333EA,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-primary { background: linear-gradient(135deg,#9333EA 0%,#7C3AED 50%,#06B6D4 100%); box-shadow: 0 4px 14px rgba(147,51,234,0.3); }
+        .btn-primary:hover { box-shadow: 0 6px 20px rgba(147,51,234,0.5); transform: translateY(-1px); }
+        .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-35deg); font-size: 6rem; font-weight: 800; color: rgba(147,51,234,0.04); pointer-events: none; z-index: 0; letter-spacing: 0.1em; }
+        .status-green { color: #16A34A; }
+        .status-amber { color: #D97706; }
+        .status-red { color: #DC2626; }
+        .dot-green { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #22C55E; }
+        .dot-amber { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; }
+        .dot-red { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #EF4444; }
+    </style>
+</head>
+<body class="bg-white text-slate-700 antialiased">
+    <div class="watermark">SAMPLE REPORT</div>
+
+    <!-- Nav -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <span class="text-xl font-bold font-display gradient-text">BizFlow&trade;</span>
+                <span class="text-[9px] text-slate-400 font-mono tracking-widest">BY TAURUS AI</span>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-sm text-slate-500 hover:text-primary transition">&larr; Back to Home</a>
+                <a href="/#request" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Request Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-purple-50 via-white to-cyan-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-4">SAMPLE REPORT &mdash; PHASE 1</div>
+            <h1 class="text-4xl md:text-5xl font-bold font-display text-dark mb-4">Office Tower Assessment:<br/>Business Bay</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8">15-story commercial office tower &bull; Plot Area 2,800 sq.m &bull; Zoning: Commercial (C-2)</p>
+
+            <!-- Risk Badge -->
+            <div class="inline-flex items-center bg-amber-50 border border-amber-200 rounded-2xl px-6 py-3 mb-10">
+                <span class="dot-amber mr-3"></span>
+                <div class="text-left">
+                    <div class="text-xs text-amber-600 font-semibold uppercase tracking-wider">Risk Rating</div>
+                    <div class="text-xl font-bold text-amber-700">MODERATE &mdash; 62/100</div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-8">
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">5</div>
+                    <div class="text-xs text-slate-400">Authorities</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">15</div>
+                    <div class="text-xs text-slate-400">Floors</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">2,800</div>
+                    <div class="text-xs text-slate-400">Plot (sq.m)</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">C-2</div>
+                    <div class="text-xs text-slate-400">Zoning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-6">Executive Summary</h2>
+            <div class="prose max-w-none text-slate-600 leading-relaxed space-y-4">
+                <p>This Phase 1 Executive Summary assesses a 15-story commercial office tower located in Business Bay, Dubai, situated on a 2,800 sq.m plot zoned Commercial (C-2) under the Dubai Municipality Development Control Regulations. The property comprises approximately 32,000 sq.m of gross leasable area across floors G+14, with ground-level retail allocation of 1,800 sq.m and basement parking for 420 vehicles.</p>
+                <p>The assessment identifies a <strong>MODERATE risk rating (Score: 62/100)</strong>, driven primarily by three factors: (1) the upcoming Dubai Metro Phase 3 Blue Line construction, which will directly impact access roads along the southern boundary for an estimated 18-24 months beginning Q3 2027; (2) a parking ratio shortfall of approximately 12% relative to updated RTA Technical Guidelines TR-2025-44; and (3) an outstanding LEED Gold certification requirement stipulated in the original DM building permit conditions.</p>
+                <p>Despite these concerns, the property benefits from strong fundamentals: prime Business Bay location within 400m of the Bay Avenue pedestrian corridor, full DEWA capacity allocation, and compliant Civil Defence fire safety systems following the 2024 retrofit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Property Details</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-semibold text-dark mb-4 text-sm uppercase tracking-wider">Location & Classification</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="text-slate-500">Address</span><span class="font-medium text-dark">Plot B-2247, Business Bay, Dubai</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Community</span><span class="font-medium text-dark">Business Bay</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Title Deed No.</span><span class="font-medium text-dark">487-2019-BB (Freehold)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Zoning</span><span class="font-medium text-dark">Commercial (C-2)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Master Developer</span><span class="font-medium text-dark">Dubai Properties Group</span></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-semibold text-dark mb-4 text-sm uppercase tracking-wider">Building Specifications</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="text-slate-500">Plot Area</span><span class="font-medium text-dark">2,800 sq.m</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Built-Up Area</span><span class="font-medium text-dark">32,000 sq.m (GLA)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Floors</span><span class="font-medium text-dark">G + 14 + Roof</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Parking</span><span class="font-medium text-dark">420 bays (2 basement levels)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Year Built</span><span class="font-medium text-dark">2019</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">BMS System</span><span class="font-medium text-dark">Honeywell Niagara N4</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Compliance Matrix -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-3">Regulatory Compliance Matrix</h2>
+            <p class="text-slate-500 mb-8">Assessment of 5 regulatory authorities with pass/review/fail determinations.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-slate-50 text-left">
+                            <th class="px-4 py-3 font-semibold text-dark">Authority</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Scope</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-center">Status</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Key Finding</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-right">Est. Cost (AED)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Dubai Municipality (DM)</td>
+                            <td class="px-4 py-3 text-slate-500">Building permits, zoning, occupancy</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-amber"></span></td>
+                            <td class="px-4 py-3 text-slate-600">LEED Gold condition in permit BC-2017-4892 remains unfulfilled; DM has issued reminder notice dated Nov 2025</td>
+                            <td class="px-4 py-3 text-right font-medium">850,000</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">ESMA</td>
+                            <td class="px-4 py-3 text-slate-500">Emirates standardization, product safety</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">All installed MEP products carry valid ESMA conformity marks; last audit Q2 2025</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Civil Defence</td>
+                            <td class="px-4 py-3 text-slate-500">Fire safety, evacuation, life safety</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Fire safety certificate renewed Jan 2025 post-retrofit; sprinkler system upgraded to UAE Fire Code 2023 standard</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">RTA</td>
+                            <td class="px-4 py-3 text-slate-500">Roads, transport, parking, traffic impact</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-red"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Parking ratio of 1:38 sq.m vs. required 1:33 sq.m (TR-2025-44); shortfall of ~52 bays. Metro Phase 3 will restrict south access road Q3 2027&ndash;Q1 2029</td>
+                            <td class="px-4 py-3 text-right font-medium">1,200,000</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">DEWA</td>
+                            <td class="px-4 py-3 text-slate-500">Electricity, water, district cooling</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Full 4.8 MVA allocation confirmed; connected to Empower district cooling; DEWA Green Building compliance achieved</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-slate-50 font-semibold">
+                            <td class="px-4 py-3 text-dark" colspan="2">Total Estimated Compliance Cost</td>
+                            <td class="px-4 py-3 text-center">
+                                <span class="dot-green mr-1"></span>3
+                                <span class="dot-amber mx-1"></span>1
+                                <span class="dot-red ml-1"></span>1
+                            </td>
+                            <td class="px-4 py-3"></td>
+                            <td class="px-4 py-3 text-right text-dark">AED 2,050,000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Risk -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Infrastructure Risk Assessment</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-red-50 text-red-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">!</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">Dubai Metro Phase 3 &mdash; Blue Line Construction</h3>
+                            <p class="text-sm text-slate-600 mb-3">The confirmed Blue Line extension (RTA Resolution 2025-187) includes a station at Business Bay South, approximately 180m from the property boundary. Construction is scheduled Q3 2027&ndash;Q1 2029, during which the southern access road (Street 12B) will be reduced to single-lane traffic with full closure periods of up to 4 weeks.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full font-semibold">HIGH IMPACT</span>
+                                <span class="text-slate-400">Timeline: 18&ndash;24 months</span>
+                                <span class="text-slate-400">Revenue impact: est. 8&ndash;15% vacancy increase during peak construction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">!</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">Parking Ratio Non-Compliance</h3>
+                            <p class="text-sm text-slate-600 mb-3">Updated RTA Technical Guidelines TR-2025-44 (effective Jan 2026) require a minimum parking ratio of 1 bay per 33 sq.m of GLA for C-2 commercial buildings. The property currently provides 420 bays against a requirement of approximately 472 bays &mdash; a shortfall of 52 spaces (12%). Options include: leasing off-site bays from adjacent Business Bay plots, installing automated parking systems, or applying for a variance based on Metro proximity.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-semibold">MEDIUM IMPACT</span>
+                                <span class="text-slate-400">Remediation cost: AED 800K&ndash;1.2M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">!</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">LEED Gold Certification Gap</h3>
+                            <p class="text-sm text-slate-600 mb-3">Building permit BC-2017-4892 includes a condition requiring LEED Gold certification within 3 years of occupancy. The building achieved LEED Silver in 2021 but has not progressed to Gold. Dubai Municipality issued a compliance reminder (Ref: DM/COMP/2025/7741) in November 2025 with a 12-month rectification deadline. Failure to comply may result in permit suspension or fines up to AED 500,000 per DM Circular 2024-12.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-semibold">MEDIUM IMPACT</span>
+                                <span class="text-slate-400">Upgrade cost: AED 650K&ndash;850K</span>
+                                <span class="text-slate-400">Deadline: Nov 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dubai 2040 Impact -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-6">Dubai 2040 Urban Master Plan Impact</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-green-50 rounded-xl border border-green-100 p-6 text-center">
+                    <div class="text-2xl font-bold text-green-700 mb-1">LOW</div>
+                    <div class="text-xs text-green-600 font-semibold uppercase tracking-wider">Rezoning Risk</div>
+                    <p class="text-xs text-slate-500 mt-2">Business Bay designated as a "Sustain and Enhance" zone &mdash; no rezoning anticipated through 2040.</p>
+                </div>
+                <div class="bg-green-50 rounded-xl border border-green-100 p-6 text-center">
+                    <div class="text-2xl font-bold text-green-700 mb-1">POSITIVE</div>
+                    <div class="text-xs text-green-600 font-semibold uppercase tracking-wider">Growth Corridor</div>
+                    <p class="text-xs text-slate-500 mt-2">Area classified as Tier 1 Commercial Growth Corridor with planned 40% office inventory increase by 2035.</p>
+                </div>
+                <div class="bg-amber-50 rounded-xl border border-amber-100 p-6 text-center">
+                    <div class="text-2xl font-bold text-amber-700 mb-1">WATCH</div>
+                    <div class="text-xs text-amber-600 font-semibold uppercase tracking-wider">Height Restriction</div>
+                    <p class="text-xs text-slate-500 mt-2">Proposed height corridor review (DM/PLAN/2026-Q1) may affect future vertical expansion rights.</p>
+                </div>
+            </div>
+            <div class="bg-slate-50 rounded-xl border border-slate-200 p-6">
+                <h3 class="font-bold text-dark mb-3">Long-Term Outlook</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">The Dubai 2040 Master Plan positions Business Bay as a key node in the city's polycentric development strategy, bridging Downtown Dubai and the Dubai Design District. Planned infrastructure investments &mdash; including Metro Phase 3, the Dubai Water Canal pedestrian network expansion, and the Business Bay Smart District initiative &mdash; are expected to increase property values by 15&ndash;22% over the next decade. However, increased office supply may compress yields from the current average of 7.2% to an estimated 6.4&ndash;6.8% by 2032.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Recommendation -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Board Recommendation</h2>
+            <div class="bg-white rounded-2xl border-2 border-amber-200 p-8">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center">
+                        <span class="text-3xl font-bold text-amber-700">!</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-amber-600 font-bold uppercase tracking-wider">Recommendation</div>
+                        <div class="text-2xl font-bold text-dark font-display">PROCEED WITH CONDITIONS</div>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm text-slate-600">
+                    <p>The property is fundamentally sound with strong location attributes and compliant utility/fire safety infrastructure. However, three conditions must be addressed prior to or concurrent with acquisition:</p>
+                    <ol class="list-decimal list-inside space-y-2 ml-4">
+                        <li><strong>LEED Gold Certification:</strong> Negotiate seller responsibility for the LEED Gold upgrade or a price reduction of AED 850,000 to cover certification costs within the DM deadline (Nov 2026).</li>
+                        <li><strong>Parking Remediation Plan:</strong> Secure either an off-site parking lease agreement or an RTA variance approval based on the upcoming Metro station proximity prior to closing.</li>
+                        <li><strong>Metro Construction Impact:</strong> Model a 10&ndash;15% vacancy allowance for Q3 2027&ndash;Q1 2029 in the investment underwriting. Consider tenant retention incentives totaling AED 400K&ndash;600K during peak construction periods.</li>
+                    </ol>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-100">
+                    <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Total Compliance Cost</div>
+                            <div class="font-bold text-dark text-lg">AED 2.05M</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Risk-Adjusted Discount</div>
+                            <div class="font-bold text-dark text-lg">4.2%</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Recommended Price Adj.</div>
+                            <div class="font-bold text-red-600 text-lg">&minus;AED 3.8M</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-6">NEXT STEP</div>
+            <h2 class="text-3xl font-bold font-display text-dark mb-4">Need Deeper Analysis?</h2>
+            <p class="text-slate-500 mb-8">This Executive Summary identified moderate risks. Upgrade to Phase 2: Due Diligence for detailed authority-by-authority investigation, site inspection, and full financial impact modeling.</p>
+            <a href="/services/phase-2-due-diligence.html" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg inline-block transition">Explore Phase 2: Due Diligence &rarr;</a>
+            <p class="text-xs text-slate-400 mt-4">Or email us directly at <a href="mailto:admin@taurusai.io" class="text-primary">admin@taurusai.io</a></p>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-8 bg-surface border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs text-slate-400 leading-relaxed"><strong>DISCLAIMER:</strong> This is a <strong>SAMPLE REPORT</strong> created for demonstration purposes only. All property details, regulatory references, authority findings, risk ratings, financial figures, and recommendations contained herein are <strong>entirely fictional</strong>. No real property, entity, or regulatory filing is represented. This document should not be used for any investment, legal, or compliance decision. Actual BizFlow&trade; reports are based on verified data from relevant Dubai authorities and tailored to specific properties.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="font-display font-bold text-lg mb-2 gradient-text">BizFlow&trade;</p>
+            <p class="text-slate-400 text-sm mb-4">Property Assessment by TAURUS AI Corp</p>
+            <div class="flex justify-center space-x-6 text-sm text-slate-500">
+                <a href="/" class="hover:text-accent transition">Home</a>
+                <a href="/services/phase-1-executive-summary.html" class="hover:text-accent transition">Phase 1</a>
+                <a href="/services/phase-2-due-diligence.html" class="hover:text-accent transition">Phase 2</a>
+                <a href="/services/phase-3-investment-grade.html" class="hover:text-accent transition">Phase 3</a>
+                <a href="/services/phase-4-annual-monitoring.html" class="hover:text-accent transition">Phase 4</a>
+                <a href="mailto:admin@taurusai.io" class="hover:text-accent transition">Contact</a>
+            </div>
+            <p class="text-xs text-slate-600 mt-6">&copy; 2026 BizFlow&trade; by Taurus AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: Executive Summary | BizFlow™ Property Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'primary': '#9333EA', 'accent': '#22D3EE', 'dark': '#0F172A', 'surface': '#F8FAFC' },
+                fontFamily: { 'display': ['Space Grotesk','sans-serif'], 'body': ['Inter','sans-serif'] }
+            }}
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg,#9333EA,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-primary { background: linear-gradient(135deg,#9333EA 0%,#7C3AED 50%,#06B6D4 100%); box-shadow: 0 4px 14px rgba(147,51,234,0.3); }
+        .btn-primary:hover { box-shadow: 0 6px 20px rgba(147,51,234,0.5); transform: translateY(-1px); }
+    </style>
+</head>
+<body class="bg-white text-slate-700 antialiased">
+    <!-- Nav -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <span class="text-xl font-bold font-display gradient-text">BizFlow™</span>
+                <span class="text-[9px] text-slate-400 font-mono tracking-widest">BY TAURUS AI</span>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-sm text-slate-500 hover:text-primary transition">&larr; Back to Home</a>
+                <a href="/#request" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Request Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-purple-50 via-white to-cyan-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-6">PHASE 1</div>
+            <h1 class="text-4xl md:text-6xl font-bold font-display text-dark mb-4">Executive Summary</h1>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-8">Board-ready property assessment with risk rating, compliance matrix, and actionable recommendation delivered in 5-7 business days.</p>
+            <div class="flex items-center justify-center space-x-8 mb-10">
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">AED 20K</div>
+                    <div class="text-sm text-slate-400">Investment</div>
+                </div>
+                <div class="w-px h-12 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">5-7</div>
+                    <div class="text-sm text-slate-400">Business Days</div>
+                </div>
+                <div class="w-px h-12 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">8</div>
+                    <div class="text-sm text-slate-400">Page Report</div>
+                </div>
+            </div>
+            <a href="/#request" class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg inline-block transition">Get Started &rarr;</a>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark text-center mb-4">What's Included</h2>
+            <p class="text-slate-500 text-center max-w-2xl mx-auto mb-12">Everything you need for a confident go/no-go investment decision.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-100">
+                    <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4 text-lg font-bold">&#10003;</div>
+                    <h3 class="font-bold text-dark mb-2">5-Authority Compliance Check</h3>
+                    <p class="text-sm text-slate-500">Dubai Municipality, ESMA, Civil Defence, RTA, and DEWA assessed for compliance status with pass/fail/review ratings.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100">
+                    <div class="w-10 h-10 bg-yellow-50 text-yellow-600 rounded-lg flex items-center justify-center mb-4 text-lg font-bold">&#9888;</div>
+                    <h3 class="font-bold text-dark mb-2">Dubai 2040 Rezoning Risk</h3>
+                    <p class="text-sm text-slate-500">20-year rezoning probability calculated using Metro proximity, transformation zone analysis, and historical patterns.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100">
+                    <div class="w-10 h-10 bg-purple-50 text-primary rounded-lg flex items-center justify-center mb-4 text-lg font-bold">&#9733;</div>
+                    <h3 class="font-bold text-dark mb-2">Board Recommendation</h3>
+                    <p class="text-sm text-slate-500">Clear Proceed / Proceed with Conditions / Do Not Proceed verdict with specific rationale for board presentation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100">
+                    <div class="w-10 h-10 bg-red-50 text-red-500 rounded-lg flex items-center justify-center mb-4 text-lg font-bold">&#9679;</div>
+                    <h3 class="font-bold text-dark mb-2">Risk Matrix (Green/Yellow/Red)</h3>
+                    <p class="text-sm text-slate-500">Overall risk rating combining regulatory compliance, infrastructure readiness, and master plan alignment scores.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100">
+                    <div class="w-10 h-10 bg-cyan-50 text-cyan-600 rounded-lg flex items-center justify-center mb-4 text-lg font-bold">$</div>
+                    <h3 class="font-bold text-dark mb-2">Key Findings with Financial Impacts</h3>
+                    <p class="text-sm text-slate-500">4-6 critical findings quantified in AED, including compliance costs, infrastructure upgrade requirements, and risk exposure.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-100">
+                    <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4 text-lg font-bold">&rarr;</div>
+                    <h3 class="font-bold text-dark mb-2">Next Steps with Deadlines</h3>
+                    <p class="text-sm text-slate-500">Actionable checklist with specific timelines for permit applications, compliance filings, and recommended Phase 2 engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark text-center mb-12">Our Process</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-4 font-display font-bold text-xl">1</div>
+                    <h3 class="font-bold text-dark mb-2">Data Collection</h3>
+                    <p class="text-xs text-primary font-semibold mb-2">Day 1-2</p>
+                    <p class="text-sm text-slate-500">Gather title deeds, query 5 regulatory databases, overlay Dubai 2040 master plan data, analyze Metro proximity.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 bg-accent text-dark rounded-2xl flex items-center justify-center mx-auto mb-4 font-display font-bold text-xl">2</div>
+                    <h3 class="font-bold text-dark mb-2">Risk Modeling</h3>
+                    <p class="text-xs text-primary font-semibold mb-2">Day 3-4</p>
+                    <p class="text-sm text-slate-500">Build multi-factor risk matrix, calculate rezoning probability, score compliance across all authorities, estimate financial impacts.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-4 font-display font-bold text-xl">3</div>
+                    <h3 class="font-bold text-dark mb-2">Report &amp; QA</h3>
+                    <p class="text-xs text-primary font-semibold mb-2">Day 5-7</p>
+                    <p class="text-sm text-slate-500">Draft 8-page executive summary, peer review by senior analyst, format for board presentation, deliver via secure email.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Deliverable -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold font-display text-dark text-center mb-12">Sample Report Preview</h2>
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                <div class="bg-gradient-to-r from-primary to-purple-800 p-6 text-white">
+                    <p class="text-purple-200 text-sm">BizFlow&trade; Executive Summary</p>
+                    <h3 class="font-display text-xl font-bold mt-1">Property Assessment Report</h3>
+                </div>
+                <div class="p-6 space-y-5">
+                    <div class="border-b border-slate-100 pb-4">
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">Board Recommendation</p>
+                        <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg font-bold text-sm">CONDITIONAL PROCEED</span>
+                    </div>
+                    <div class="border-b border-slate-100 pb-4">
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">Risk Matrix</p>
+                        <div class="grid grid-cols-5 gap-2 text-center text-xs font-semibold">
+                            <div class="bg-green-50 text-green-700 rounded-lg py-2">DM<br/><span class="font-normal">Pass</span></div>
+                            <div class="bg-green-50 text-green-700 rounded-lg py-2">ESMA<br/><span class="font-normal">Pass</span></div>
+                            <div class="bg-green-50 text-green-700 rounded-lg py-2">Civil D.<br/><span class="font-normal">Pass</span></div>
+                            <div class="bg-green-50 text-green-700 rounded-lg py-2">RTA<br/><span class="font-normal">Pass</span></div>
+                            <div class="bg-red-50 text-red-700 rounded-lg py-2">DEWA<br/><span class="font-normal">Review</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 uppercase tracking-wider font-bold mb-2">Financial Impact</p>
+                        <div class="flex justify-between text-sm"><span class="text-slate-500">Compliance cost</span><span class="font-bold">AED 340,000</span></div>
+                        <div class="flex justify-between text-sm mt-1"><span class="text-slate-500">Penalty exposure</span><span class="font-bold text-red-600">AED 1,200,000</span></div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 px-6 py-3 text-center text-xs text-slate-400">Sample only &mdash; actual reports are property-specific</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold font-display text-dark text-center mb-12">Who Is This For?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-surface rounded-2xl p-8 border border-slate-100">
+                    <h3 class="font-bold text-dark text-lg mb-3">Investors Evaluating a Property</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">You're considering a purchase or lease and need a quick, reliable compliance snapshot before committing capital. This report gives you the facts in under a week.</p>
+                </div>
+                <div class="bg-surface rounded-2xl p-8 border border-slate-100">
+                    <h3 class="font-bold text-dark text-lg mb-3">Board Members Needing Go/No-Go</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Your board needs a concise, data-backed recommendation &mdash; not a 50-page document. The Executive Summary delivers a clear Proceed, Conditional, or Reject verdict.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold font-display text-dark text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white rounded-xl border border-slate-100 group" open>
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-dark">What documents do I need to provide?</summary>
+                    <div class="px-6 pb-6 text-sm text-slate-500">At minimum, the property address, title deed copy, and any existing permits. We provide a complete document checklist upon engagement.</div>
+                </details>
+                <details class="bg-white rounded-xl border border-slate-100 group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-dark">Can I upgrade to Phase 2 after receiving Phase 1?</summary>
+                    <div class="px-6 pb-6 text-sm text-slate-500">Yes. Many clients start with Phase 1 as a screening tool. If the property passes, you can upgrade to Phase 2 at a discounted rate of AED 45,000 (saving AED 10,000).</div>
+                </details>
+                <details class="bg-white rounded-xl border border-slate-100 group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-dark">Does this include a physical site visit?</summary>
+                    <div class="px-6 pb-6 text-sm text-slate-500">Phase 1 is desk-based using regulatory databases and satellite imagery. Site visits are included from Phase 2, or can be added for AED 5,000.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold font-display text-dark mb-4">Ready to Get Started?</h2>
+            <p class="text-slate-500 mb-8">Submit your property details and receive your 8-page Executive Summary in 5-7 business days.</p>
+            <a href="/#request" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg inline-block transition">Request Phase 1 Assessment &rarr;</a>
+            <p class="text-xs text-slate-400 mt-4">Or email us directly at <a href="mailto:admin@taurusai.io" class="text-primary">admin@taurusai.io</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="font-display font-bold text-lg mb-2 gradient-text">BizFlow&trade;</p>
+            <p class="text-slate-400 text-sm mb-4">Property Assessment by TAURUS AI Corp</p>
+            <div class="flex justify-center space-x-6 text-sm text-slate-500">
+                <a href="/" class="hover:text-accent transition">Home</a>
+                <a href="/services/phase-2-due-diligence.html" class="hover:text-accent transition">Phase 2</a>
+                <a href="/services/phase-3-investment-grade.html" class="hover:text-accent transition">Phase 3</a>
+                <a href="/services/phase-4-annual-monitoring.html" class="hover:text-accent transition">Phase 4</a>
+                <a href="mailto:admin@taurusai.io" class="hover:text-accent transition">Contact</a>
+            </div>
+            <p class="text-xs text-slate-600 mt-6">&copy; 2026 BizFlow&trade; by Taurus AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

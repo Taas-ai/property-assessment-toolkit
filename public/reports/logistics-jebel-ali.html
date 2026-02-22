@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Hub Assessment: Jebel Ali | BizFlow™ Property Assessment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { 'primary': '#9333EA', 'accent': '#22D3EE', 'dark': '#0F172A', 'surface': '#F8FAFC' },
+                fontFamily: { 'display': ['Space Grotesk','sans-serif'], 'body': ['Inter','sans-serif'] }
+            }}
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg,#9333EA,#22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-primary { background: linear-gradient(135deg,#9333EA 0%,#7C3AED 50%,#06B6D4 100%); box-shadow: 0 4px 14px rgba(147,51,234,0.3); }
+        .btn-primary:hover { box-shadow: 0 6px 20px rgba(147,51,234,0.5); transform: translateY(-1px); }
+        .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-35deg); font-size: 6rem; font-weight: 800; color: rgba(147,51,234,0.04); pointer-events: none; z-index: 0; letter-spacing: 0.1em; }
+        .dot-green { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #22C55E; }
+        .dot-amber { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #F59E0B; }
+        .dot-red { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #EF4444; }
+    </style>
+</head>
+<body class="bg-white text-slate-700 antialiased">
+    <div class="watermark">SAMPLE REPORT</div>
+
+    <!-- Nav -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="/" class="flex items-center space-x-2">
+                <span class="text-xl font-bold font-display gradient-text">BizFlow&trade;</span>
+                <span class="text-[9px] text-slate-400 font-mono tracking-widest">BY TAURUS AI</span>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="/" class="text-sm text-slate-500 hover:text-primary transition">&larr; Back to Home</a>
+                <a href="/#request" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Request Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-purple-50 via-white to-cyan-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-4">SAMPLE REPORT &mdash; PHASE 1</div>
+            <h1 class="text-4xl md:text-5xl font-bold font-display text-dark mb-4">Logistics Hub Assessment:<br/>Jebel Ali Free Zone</h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8">Logistics &amp; warehouse facility &bull; Plot Area 12,000 sq.m &bull; Zoning: Industrial-Logistics (IL-2)</p>
+
+            <!-- Risk Badge -->
+            <div class="inline-flex items-center bg-yellow-50 border border-yellow-200 rounded-2xl px-6 py-3 mb-10">
+                <span class="dot-amber mr-3"></span>
+                <div class="text-left">
+                    <div class="text-xs text-yellow-600 font-semibold uppercase tracking-wider">Risk Rating</div>
+                    <div class="text-xl font-bold text-yellow-700">LOW-MODERATE &mdash; 71/100</div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-8">
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">7</div>
+                    <div class="text-xs text-slate-400">Authorities</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">12,000</div>
+                    <div class="text-xs text-slate-400">Plot (sq.m)</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">IL-2</div>
+                    <div class="text-xs text-slate-400">Zoning</div>
+                </div>
+                <div class="w-px h-10 bg-slate-200"></div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold gradient-text">JAFZA</div>
+                    <div class="text-xs text-slate-400">Free Zone</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-6">Executive Summary</h2>
+            <div class="prose max-w-none text-slate-600 leading-relaxed space-y-4">
+                <p>This Phase 1 Executive Summary assesses a logistics and warehouse facility located within Jebel Ali Free Zone (JAFZA), Dubai, occupying a 12,000 sq.m plot classified as Industrial-Logistics (IL-2) under JAFZA Development Regulations. The facility comprises a 9,200 sq.m warehouse with 12m clear height, a 1,400 sq.m mezzanine office component, a dedicated loading yard with 8 dock-leveler bays, and hardstanding for 24 trailer units.</p>
+                <p>The assessment identifies a <strong>LOW-MODERATE risk rating (Score: 71/100)</strong>, driven by three primary factors: (1) JAFZA-specific regulatory requirements that differ from mainland Dubai Municipality jurisdiction, creating a dual compliance layer for certain operations; (2) hazardous materials storage requirements under UAE Federal Decree-Law No. 24 of 2022 (Chemical Management) which necessitate upgraded containment infrastructure in Bay 3; and (3) the Etihad Rail Stage 2 corridor, confirmed to pass within 800m of the plot boundary, introducing construction disruption risk for 2027&ndash;2028 and long-term vibration considerations.</p>
+                <p>The property benefits from JAFZA's strategic positioning: 100% foreign ownership, 0% corporate and personal income tax, proximity to Jebel Ali Port (the largest in the Middle East), and direct access to Sheikh Zayed Road and Emirates Road. Current occupancy stands at 100% with a single tenant (3PL operator) on a 5-year lease expiring December 2028.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Details -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Property Details</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-semibold text-dark mb-4 text-sm uppercase tracking-wider">Location & Classification</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="text-slate-500">Address</span><span class="font-medium text-dark">Plot LB-4417, JAFZA South, Dubai</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Free Zone</span><span class="font-medium text-dark">Jebel Ali Free Zone (JAFZA)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Lease No.</span><span class="font-medium text-dark">JAFZA/LB/2018/4417 (Leasehold)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Zoning</span><span class="font-medium text-dark">Industrial-Logistics (IL-2)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Lease Term</span><span class="font-medium text-dark">25 years (exp. 2043)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Port Distance</span><span class="font-medium text-dark">4.2 km to Jebel Ali Port Gate 3</span></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-semibold text-dark mb-4 text-sm uppercase tracking-wider">Facility Specifications</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="text-slate-500">Plot Area</span><span class="font-medium text-dark">12,000 sq.m</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Warehouse</span><span class="font-medium text-dark">9,200 sq.m (12m clear height)</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Mezzanine Office</span><span class="font-medium text-dark">1,400 sq.m</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Loading Bays</span><span class="font-medium text-dark">8 dock-leveler bays</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Trailer Parking</span><span class="font-medium text-dark">24 hardstanding bays</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Year Built</span><span class="font-medium text-dark">2019</span></div>
+                        <div class="flex justify-between"><span class="text-slate-500">Current Tenant</span><span class="font-medium text-dark">3PL operator (lease to Dec 2028)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulatory Compliance Matrix -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-3">Regulatory Compliance Matrix</h2>
+            <p class="text-slate-500 mb-8">Assessment of 7 regulatory authorities with pass/review/fail determinations.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-slate-50 text-left">
+                            <th class="px-4 py-3 font-semibold text-dark">Authority</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Scope</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-center">Status</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Key Finding</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-right">Est. Cost (AED)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Dubai Municipality (DM)</td>
+                            <td class="px-4 py-3 text-slate-500">Building code (advisory in JAFZA), environmental</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">DM building code compliance confirmed through JAFZA's adopted standards. Environmental clearance valid. No active enforcement notices.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">ESMA</td>
+                            <td class="px-4 py-3 text-slate-500">Product standards, warehouse equipment</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Racking systems (Dexion P90) certified to ESMA/SASO load-bearing standards. Forklift fleet compliant. Last inspection: Sep 2025.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Civil Defence</td>
+                            <td class="px-4 py-3 text-slate-500">Fire safety, sprinklers, hazmat response</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-amber"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Main warehouse fire system compliant (ESFR sprinklers). However, Bay 3 hazmat storage area requires upgraded foam suppression system per UAE Fire Code 2023 Amendment 4 for Class 3 flammable liquids.</td>
+                            <td class="px-4 py-3 text-right font-medium">380,000</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">RTA</td>
+                            <td class="px-4 py-3 text-slate-500">Roads, heavy vehicle access, traffic impact</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Direct access to JAFZA internal road network. Heavy vehicle permits current. No traffic study required (below 500 daily trips threshold). E311 interchange 1.8km.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">DEWA</td>
+                            <td class="px-4 py-3 text-slate-500">Electricity, water, solar mandate</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-amber"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Current 2.1 MVA allocation adequate. However, DEWA's Shams Dubai industrial mandate (Circular 2025-07) requires 10% renewable energy by Dec 2027. Rooftop solar feasibility: 800 sq.m available, est. 180 kWp capacity.</td>
+                            <td class="px-4 py-3 text-right font-medium">520,000</td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">JAFZA</td>
+                            <td class="px-4 py-3 text-slate-500">Free zone regulations, trade licenses, lease</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Ground lease in good standing (25-year term to 2043). JAFZA trade license current. Sub-letting permitted per lease clause 14.2. Annual facility inspection passed Oct 2025.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Dubai Customs</td>
+                            <td class="px-4 py-3 text-slate-500">Customs bonded status, trade compliance</td>
+                            <td class="px-4 py-3 text-center"><span class="dot-green"></span></td>
+                            <td class="px-4 py-3 text-slate-600">Customs bonded warehouse license (CBW-2020-7712) active. AEO (Authorized Economic Operator) status held by tenant. Smart customs clearance system operational.</td>
+                            <td class="px-4 py-3 text-right font-medium">&mdash;</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="bg-slate-50 font-semibold">
+                            <td class="px-4 py-3 text-dark" colspan="2">Total Estimated Compliance Cost</td>
+                            <td class="px-4 py-3 text-center">
+                                <span class="dot-green mr-1"></span>5
+                                <span class="dot-amber mx-1"></span>2
+                                <span class="dot-red ml-1"></span>0
+                            </td>
+                            <td class="px-4 py-3"></td>
+                            <td class="px-4 py-3 text-right text-dark">AED 900,000</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Zone vs Mainland -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Free Zone vs. Mainland Regulatory Differences</h2>
+            <p class="text-slate-500 mb-6">JAFZA operates under a distinct regulatory framework that differs from mainland Dubai Municipality jurisdiction in several key areas.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border border-slate-200 rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-slate-50 text-left">
+                            <th class="px-4 py-3 font-semibold text-dark">Regulatory Area</th>
+                            <th class="px-4 py-3 font-semibold text-dark">JAFZA (Free Zone)</th>
+                            <th class="px-4 py-3 font-semibold text-dark">Mainland Dubai</th>
+                            <th class="px-4 py-3 font-semibold text-dark text-center">Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Building Permits</td>
+                            <td class="px-4 py-3 text-slate-600">JAFZA Engineering Dept. (single window)</td>
+                            <td class="px-4 py-3 text-slate-600">DM + Trakhees/DDA (multi-authority)</td>
+                            <td class="px-4 py-3 text-center"><span class="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Simpler</span></td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">Trade License</td>
+                            <td class="px-4 py-3 text-slate-600">JAFZA Authority (100% foreign ownership)</td>
+                            <td class="px-4 py-3 text-slate-600">DED (requires local sponsor or 100% since Jun 2021)</td>
+                            <td class="px-4 py-3 text-center"><span class="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Favorable</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Customs Duty</td>
+                            <td class="px-4 py-3 text-slate-600">0% within zone; 5% on mainland transfer</td>
+                            <td class="px-4 py-3 text-slate-600">5% standard import duty</td>
+                            <td class="px-4 py-3 text-center"><span class="bg-green-50 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Favorable</span></td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">Environmental</td>
+                            <td class="px-4 py-3 text-slate-600">JAFZA EHS Dept. + federal UAE standards</td>
+                            <td class="px-4 py-3 text-slate-600">DM Environment Dept. + federal UAE standards</td>
+                            <td class="px-4 py-3 text-center"><span class="bg-amber-50 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold">Dual Layer</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium text-dark">Hazmat Storage</td>
+                            <td class="px-4 py-3 text-slate-600">JAFZA HSE + Civil Defence + Federal Decree-Law 24/2022</td>
+                            <td class="px-4 py-3 text-slate-600">DM + Civil Defence + Federal Decree-Law 24/2022</td>
+                            <td class="px-4 py-3 text-center"><span class="bg-amber-50 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold">Complex</span></td>
+                        </tr>
+                        <tr class="bg-slate-50/50">
+                            <td class="px-4 py-3 font-medium text-dark">Property Tenure</td>
+                            <td class="px-4 py-3 text-slate-600">Long-term lease (up to 50 years)</td>
+                            <td class="px-4 py-3 text-slate-600">Freehold or leasehold (varies)</td>
+                            <td class="px-4 py-3 text-center"><span class="bg-amber-50 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold">Leasehold Only</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure & Environmental Risk -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Infrastructure & Environmental Risk</h2>
+            <div class="space-y-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">&#9888;</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">Etihad Rail Stage 2 Proximity</h3>
+                            <p class="text-sm text-slate-600 mb-3">The Etihad Rail Stage 2 corridor (Abu Dhabi&ndash;Dubai&ndash;Fujairah freight line) is confirmed to pass approximately 800m south of the plot boundary. Construction is scheduled for 2027&ndash;2028, with potential access disruptions on the southern JAFZA service road during heavy civil works. Long-term, the rail proximity is a net positive for logistics operations &mdash; JAFZA has announced plans for a rail freight terminal within 2km of the property, expected operational by 2030.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-semibold">SHORT-TERM DISRUPTION</span>
+                                <span class="text-slate-400">Long-term: NET POSITIVE for logistics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-red-50 text-red-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">&#9679;</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">Hazardous Materials Storage &mdash; Bay 3 Upgrade</h3>
+                            <p class="text-sm text-slate-600 mb-3">The current tenant stores Class 3 flammable liquids (industrial solvents) in Bay 3, totaling approximately 40 cubic meters. UAE Federal Decree-Law No. 24 of 2022 (Chemical Management), read with JAFZA HSE Directive 2024-03, requires: (a) a dedicated foam-based fire suppression system (current dry-pipe system insufficient), (b) secondary containment bunding capable of holding 110% of stored volume, and (c) real-time environmental monitoring with JAFZA HSE integration. The containment bunding is compliant; the suppression system and monitoring require upgrade.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-red-50 text-red-700 px-3 py-1 rounded-full font-semibold">COMPLIANCE REQUIRED</span>
+                                <span class="text-slate-400">Deadline: Jun 2026 (JAFZA extension granted)</span>
+                                <span class="text-slate-400">Cost: AED 380K</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center flex-shrink-0 text-lg font-bold">&#9788;</div>
+                        <div>
+                            <h3 class="font-bold text-dark mb-2">DEWA Solar Mandate Compliance</h3>
+                            <p class="text-sm text-slate-600 mb-3">DEWA Circular 2025-07 mandates that all industrial properties exceeding 5,000 sq.m must generate at least 10% of energy consumption from renewable sources by December 2027. The facility's annual consumption is approximately 1.8 GWh. The warehouse roof offers ~800 sq.m of suitable area for a 180 kWp solar PV installation, which would generate an estimated 270 MWh/year (15% of consumption), exceeding the 10% minimum. Installation timeline is 4&ndash;6 months including DEWA interconnection approval.</p>
+                            <div class="flex space-x-4 text-xs">
+                                <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-semibold">DEADLINE: DEC 2027</span>
+                                <span class="text-slate-400">ROI: 4.2 years with DEWA net metering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrial Environmental Compliance -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-6">Industrial Environmental Compliance</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-bold text-dark mb-3">Air Quality & Emissions</h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>No stack emissions (non-manufacturing use)</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Diesel generator emissions within JAFZA limits</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Refrigerant management plan in place (R-410A)</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>No asbestos-containing materials identified</span></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-bold text-dark mb-3">Waste & Water Management</h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Solid waste contract with JAFZA-approved contractor</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-amber"></span><span>Hazardous waste manifest system needs digital upgrade</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Oil-water separator functional and maintained</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>No groundwater contamination risk identified</span></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-bold text-dark mb-3">Noise & Vibration</h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Industrial zone &mdash; no residential noise limits apply</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-amber"></span><span>Etihad Rail construction may introduce temporary vibration</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Loading operations within JAFZA permitted hours (24/7)</span></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl border border-slate-100 p-6">
+                    <h3 class="font-bold text-dark mb-3">Soil & Contamination</h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Phase I ESA conducted 2018 &mdash; no recognized conditions</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>No underground storage tanks on site</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>Secondary containment in hazmat area compliant</span></div>
+                        <div class="flex items-center space-x-2"><span class="dot-green"></span><span>No historical industrial use prior to 2018 development</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Recommendation -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold font-display text-dark mb-8">Board Recommendation</h2>
+            <div class="bg-white rounded-2xl border-2 border-yellow-200 p-8">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center">
+                        <span class="text-3xl font-bold text-yellow-700">!</span>
+                    </div>
+                    <div>
+                        <div class="text-xs text-yellow-600 font-bold uppercase tracking-wider">Recommendation</div>
+                        <div class="text-2xl font-bold text-dark font-display">PROCEED WITH CONDITIONS</div>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm text-slate-600">
+                    <p>The property offers strong logistics fundamentals with JAFZA's favorable regulatory environment, port proximity, and upcoming rail connectivity. Two compliance items require attention prior to or shortly after acquisition:</p>
+                    <ol class="list-decimal list-inside space-y-2 ml-4">
+                        <li><strong>Hazmat Fire Suppression Upgrade:</strong> The Bay 3 foam suppression system must be upgraded by the JAFZA-granted deadline of June 2026. Negotiate with the current tenant (as primary user of hazmat storage) for cost-sharing, or factor AED 380,000 into acquisition pricing. This is a non-negotiable compliance requirement.</li>
+                        <li><strong>DEWA Solar Installation:</strong> Commission a rooftop solar PV feasibility study immediately post-acquisition. The 180 kWp system (AED 520,000) has a 4.2-year ROI with DEWA net metering and satisfies the Dec 2027 renewable energy mandate. Early installation maximizes energy cost savings.</li>
+                        <li><strong>Etihad Rail Disruption Planning:</strong> Include a construction disruption allowance of AED 150K&ndash;200K in the 2027&ndash;2028 operating budget for potential access detours and tenant accommodation. Secure written confirmation from JAFZA regarding alternative access routes during construction.</li>
+                        <li><strong>Tenant Lease Renewal Strategy:</strong> With the current 3PL tenant's lease expiring Dec 2028, initiate renewal discussions 12 months in advance. The Etihad Rail freight terminal (est. 2030) will significantly increase the property's strategic value, supporting a 15&ndash;20% rent escalation at renewal.</li>
+                    </ol>
+                </div>
+                <div class="mt-6 pt-6 border-t border-slate-100">
+                    <div class="grid grid-cols-4 gap-4 text-center text-sm">
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Total Compliance Cost</div>
+                            <div class="font-bold text-dark text-lg">AED 900K</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Estimated Yield</div>
+                            <div class="font-bold text-dark text-lg">8.4%</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Lease Expiry</div>
+                            <div class="font-bold text-dark text-lg">Dec 2028</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400 mb-1">Ground Lease</div>
+                            <div class="font-bold text-green-600 text-lg">17 yrs remain</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center px-3 py-1 bg-purple-100 text-primary rounded-full text-xs font-bold mb-6">NEXT STEP</div>
+            <h2 class="text-3xl font-bold font-display text-dark mb-4">Need Full Due Diligence?</h2>
+            <p class="text-slate-500 mb-8">This Executive Summary identified conditions requiring attention. Upgrade to Phase 2: Due Diligence for detailed JAFZA lease analysis, hazmat compliance deep-dive, environmental site assessment, and tenant lease audit.</p>
+            <a href="/services/phase-2-due-diligence.html" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg inline-block transition">Explore Phase 2: Due Diligence &rarr;</a>
+            <p class="text-xs text-slate-400 mt-4">Or email us directly at <a href="mailto:admin@taurusai.io" class="text-primary">admin@taurusai.io</a></p>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-8 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-xs text-slate-400 leading-relaxed"><strong>DISCLAIMER:</strong> This is a <strong>SAMPLE REPORT</strong> created for demonstration purposes only. All property details, regulatory references, authority findings, risk ratings, financial figures, and recommendations contained herein are <strong>entirely fictional</strong>. No real property, entity, or regulatory filing is represented. This document should not be used for any investment, legal, or compliance decision. Actual BizFlow&trade; reports are based on verified data from relevant Dubai authorities and tailored to specific properties.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="font-display font-bold text-lg mb-2 gradient-text">BizFlow&trade;</p>
+            <p class="text-slate-400 text-sm mb-4">Property Assessment by TAURUS AI Corp</p>
+            <div class="flex justify-center space-x-6 text-sm text-slate-500">
+                <a href="/" class="hover:text-accent transition">Home</a>
+                <a href="/services/phase-1-executive-summary.html" class="hover:text-accent transition">Phase 1</a>
+                <a href="/services/phase-2-due-diligence.html" class="hover:text-accent transition">Phase 2</a>
+                <a href="/services/phase-3-investment-grade.html" class="hover:text-accent transition">Phase 3</a>
+                <a href="/services/phase-4-annual-monitoring.html" class="hover:text-accent transition">Phase 4</a>
+                <a href="mailto:admin@taurusai.io" class="hover:text-accent transition">Contact</a>
+            </div>
+            <p class="text-xs text-slate-600 mt-6">&copy; 2026 BizFlow&trade; by Taurus AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
